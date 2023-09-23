@@ -1,0 +1,42 @@
+.container {
+    font-family: var(--font-1);
+    font-weight: bold;
+    color: var(--color-4);
+    text-align: center;
+    padding: 2rem 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--size-1);
+}
+
+.container p {
+    font-family: var(--font-2);
+    font-weight: lighter;
+}
+
+.container figure img:nth-child(1) {
+    margin-bottom: 3rem;
+    display: block;
+    width: 100%;
+}
+
+/* MEDIA QUERY */
+
+@media (min-width: 56.25rem) { /* 900px */
+
+    .container figure {
+        margin-top: 1rem;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .container figure img:nth-child(1), .container figure img:nth-child(2) {
+        width: 50%;
+        height: 50%;
+    }
+    
+}

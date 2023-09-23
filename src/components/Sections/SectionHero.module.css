@@ -1,0 +1,173 @@
+/* SECTION */
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    width: 100vw;
+    container-type: inline-size;
+
+    position: relative;
+}
+
+/* SECTION FIRST DIV */
+.mainText {
+    font-family: var(--font-2);
+    font-size: 1.5rem;
+    color: var(--color-4);
+    text-align: center;
+
+    position: relative;
+}
+
+.mainText div{
+    position: absolute;
+    right: 1rem;
+}
+
+
+/* SECTION SECOND DIV */
+.mainCta {
+    font-family: var(--font-1);
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--color-4);
+
+    margin-top: 2rem;
+
+    position: relative;
+}
+
+.text--1, .text--2 {
+    display: flex;
+    justify-content: center;
+
+    width: 30rem;
+    margin: 0 auto;
+    font-size: var(--size-1);
+}
+
+.text--1 {
+    position: relative;
+}
+
+.bulb {
+    position: absolute;
+    top: -2rem;
+    right: 5rem;
+}
+
+
+.mainCta p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.mainCta button {
+    margin-bottom: 1rem;
+}
+
+.imgContainer {
+    position: relative;
+}
+
+.imgContainer img {
+    width: 100%;
+    border-bottom: .1rem solid #333;
+}
+
+/* ANIMATION */
+/*  image 1*/
+
+.chopsticks {
+	position: absolute;
+	right: 0;
+	top: 10%;
+}
+
+/*  image 2 */
+
+.veribear {
+	width: 10vmin;
+	position: absolute;
+	bottom: 5%;
+	right: 5%;
+	rotate: -20deg;
+}
+
+/* image 3 */
+.bento {
+	position: absolute;
+	bottom: 0%;
+	left: 10%;
+	rotate: 90deg;
+	height: 40vmin;
+}
+
+@supports (animation-timeline: scroll()) {
+    .mainCta {
+        animation: scale-up linear both;
+        animation-timeline: view(block);
+        animation-range: entry 0 exit 100;
+    }
+}
+
+/* @supports (animation-timeline: scroll()) {
+	section {
+		view-timeline-name: --section;
+	}
+	:is(.chopsticks, .bento) {
+		-webkit-animation: slide both linear;
+		animation: slide both linear;
+		animation-timeline: --section;
+		animation-range: exit 0 exit 25%;
+	}
+	.chopsticks {
+		--x: 50%;
+		--y: 100%;
+		--opacity: 0;
+	}
+	.bento {
+		--x: -100%;
+		--y: 100%;
+		--opacity: 0;
+	}
+	@-webkit-keyframes slide {
+		to {
+			translate: var(--x, 0) var(--y, 0);
+			opacity: var(--opacity, 1);
+			scale: var(--scale, 1);
+		}
+	}
+	@keyframes slide {
+		to {
+			translate: var(--x, 0) var(--y, 0);
+			opacity: var(--opacity, 1);
+			scale: var(--scale, 1);
+		}
+	}
+
+} */
+
+/* MEDIA QUERY */
+@media (min-width: 56.25rem) { /* 900px */
+    .mainText {
+        position: relative;
+        top: 1rem;
+        right: -20%;
+    }
+
+    .mainCta {
+        align-self: center;
+    }
+
+    .bulb {
+        top: -1rem;
+    }
+
+    .content {
+        display: flex;
+        padding: 0 4rem 0 4rem;
+    }
+}

@@ -1,0 +1,13 @@
+.particle-pen {
+    position: absolute;
+	width: 200%;
+	aspect-ratio: 1;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	-webkit-mask: radial-gradient(var(--color-4), transparent 65%);
+	z-index: -1;
+	opacity: var(--active);
+	transition: opacity var(--transition);
+}
+

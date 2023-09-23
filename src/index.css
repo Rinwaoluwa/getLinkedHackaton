@@ -1,0 +1,149 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-1);
+}
+
+html {
+  font-size: 62.5%;  /*10px */
+}
+
+
+/* Clash Display*/
+@font-face {
+  font-family: "Clash Display";
+  src: url(/fonts/ClashDisplay-Bold.woff), format('woff');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url(/fonts/ClashDisplay-Medium.woff), format('woff');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url(/fonts/ClashDisplay-Light.woff), format('woff');
+  font-weight: lighter;
+}
+
+/*    Montserrat  */
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(/fonts/Montserrat-Bold.ttf), format('ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(/fonts/Montserrat-Medium.ttf), format('ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(/fonts/Montserrat-Light.ttf), format('ttf');
+  font-weight: lighter;
+}
+
+/* Inter */
+
+@font-face {
+  font-family: "Inter";
+  src: url(/fonts/Inter-Bold.ttf), format('ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(/fonts/Inter-Medium.ttf), format('ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(/fonts/Inter-Light.ttf), format('ttf');
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "Unica One";
+  src: url(/fonts/UnicaOne-Regular.ttf), format('ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Made Tommy";
+  src: url(/fonts/MADE_Tommy_Soft_Bold_Outline_PERSONAL_USE.otf), format('otf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Typo Hoop";
+  src: url(/fonts/Typo_Hoop_Regular_Demo.otf);
+  font-weight: bold;
+}
+
+:root {
+  /* COLORS */
+  --color-1: #150E28;
+  --color-2: #903AFF;
+  --color-3: #D434FE;
+  --color-4: #fff;
+  --color-5: #00A3FF;
+
+  /* FONTS */
+  --font-1: "Clash Display";
+  --font-2: "Montserrat";
+  --font-3: "Inter";
+  --font-4: "Made Tommy";
+  --font-5: "Typo Hoop";
+
+  --x: 66;
+  --y: 58;
+  --duration: 14;
+  --delay: 3;
+  --alpha: 0.7;
+  --origin-x: -559%;
+  --origin-y: -796%;
+
+  --size: 0.84;
+  --size-1: 2rem;
+  --size-2: 3rem;
+  --size-3: 4rem;
+  
+  --transition: 0.25s;
+	--spark: 1.8s;
+  --active: 1;
+  --play-state: running;
+  
+  
+}
+
+/* Utility Class */
+.color-purple {
+  color: var(--color-3);
+}
+
+.gradient {
+  background-image: linear-gradient(to right, var(--color-3), var(--color-2));
+}
+
+.border-bottom {
+  border-bottom:.1rem solid #333;
+}
+
+/* MEDIA QUERY */
+@media (min-width: 48rem) {
+  html {
+    font-size: 80%; /*8px*/
+  }
+}

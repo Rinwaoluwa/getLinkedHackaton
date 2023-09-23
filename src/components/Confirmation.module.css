@@ -1,0 +1,72 @@
+.container {  
+    background-color: #150e28e4;
+
+    height: 100vh;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+
+.main{
+    border: .18rem solid var(--color-3);
+    border-radius: .3rem;
+    margin: 1rem;
+
+    font-family: var(--font-2);
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--color-4);
+
+    text-align: center;
+}
+
+.container div figure {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    position: relative;
+}
+
+.container div figure span {
+    display: flex;
+}
+
+.container div figure figcaption > *{
+    margin-bottom: 1rem;
+}
+
+
+.img--1, .img--2 {
+    width: 100%;
+}
+
+.img--1 {
+    position: relative;
+    z-index: -1;
+}
+
+.img--2 {
+    margin-left: -7rem;
+}
+
+.img--3 {
+    height: 2rem;
+    width: 2rem;
+}
+
+.confirmationText {
+    display: flex;
+}
+
+.confirmationParagraph {
+    font-size: 1rem;
+}

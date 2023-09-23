@@ -1,0 +1,21 @@
+.stars {
+    position: relative;
+}
+
+.stars > * {
+    position: absolute;
+}
+
+.star-1{
+    top: -2rem;
+    left: 6rem;
+}
+
+.star-2{
+    top: 8rem;
+    right: 1rem;
+}
+
+.star-3{
+    right: 1rem;
+}

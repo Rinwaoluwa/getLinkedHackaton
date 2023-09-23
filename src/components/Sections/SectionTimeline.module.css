@@ -1,0 +1,139 @@
+.timeline {
+   text-align: center;
+   margin-top: 2rem;
+   color: var(--color-4);
+   padding: 2rem 1rem;
+
+   position: relative;
+}
+
+.timeline h2 {
+    font-family: var(--font-1);
+    font-weight: bold;
+    font-size: var(--size-2);
+}
+
+.timeline p {
+    font-family: var(--font-2);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.timeline > * {
+    margin-bottom: 1.5rem;
+}
+
+.timelineTracker {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+
+   height: 15rem;
+}
+
+.strokeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .3rem;
+}
+
+.stroke {
+    height: 9rem;
+    width: .4rem;
+    background-color: var(--color-3);
+
+    display: block;
+}
+
+.strokeText {
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    
+    margin-bottom: .5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-4);
+
+    font-size: var(--size-1);
+}
+
+.event {
+    font-family: var(--font-2);
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.eventDetails > *{
+    margin-bottom: 1rem;
+}
+
+
+/* MEDIA QUERY */
+@media (min-width: 56.25rem) { /* 900px */
+
+    .timelineTracker {
+        position: relative; /* the parent container for stroke */
+        margin-bottom:-1.8rem;
+        margin-left: 3rem;
+    }
+
+    /* POSITIONING LOGIC FOR DESKTOP */
+    .timelineTracker:nth-child(4) .eventDate, 
+    .timelineTracker:nth-child(6) .eventDate, 
+    .timelineTracker:nth-child(8) .eventDate{
+        order: -1;
+        width: 45%;
+    }
+
+    /* THIS HAS A SPACING ISSUE BECUASE OF THE SHORT TEXT --fix later*/
+    .timelineTracker:nth-child(5) .eventDate {
+       position: relative;
+       
+    }
+
+
+    .event {
+        position: absolute;
+
+        display: flex;
+        gap: 15rem;
+    }
+
+    .eventDetails {
+        width: 50%;
+    }
+
+    .eventDate {
+        align-self: center;
+    }
+
+
+    .strokeContainer {
+        gap: .5rem;
+
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+    }
+}
+
+/* min-width: 74.57rem 1193*/
+/* min-width: 56.25rem 900*/
+@media (min-width: 74.57rem) { /*1193px*/
+    .timelineTracker:nth-child(4) .eventDate, 
+    .timelineTracker:nth-child(6) .eventDate, 
+    .timelineTracker:nth-child(8) .eventDate{
+        width: 100%;
+    }
+
+    .timelineTracker:nth-child(4) .eventDate {
+        position: absolute;
+        left: 0;
+        background-color: red;
+    }
+}

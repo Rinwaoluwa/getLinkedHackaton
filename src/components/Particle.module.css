@@ -1,0 +1,27 @@
+@keyframes float-out {
+    to {
+        rotate: 360deg;
+    }
+}
+
+.particle {
+	aspect-ratio: 1;
+	position: absolute;
+	top: calc(var(--y) * 1%);
+	left: calc(var(--x) * 1%);
+	animation: float-out calc(var(--duration) * 1s) calc(var(--delay) * -1s) infinite linear;
+	transform-origin: var(--origin-x) var(--origin-y);
+	z-index: -1;
+	animation-play-state: var(--play-state);
+
+    height: var(--size-1);
+    width: var(--size-1);
+}
+
+.particle path {
+	stroke: none;
+}
+
+.particle:nth-of-type(even) {
+	animation-direction: reverse;
+}

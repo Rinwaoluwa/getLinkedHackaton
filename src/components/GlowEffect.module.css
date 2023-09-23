@@ -1,0 +1,14 @@
+
+@keyframes grow {
+    0% {
+        transform: scale(0);
+    }
+
+    50%, 100% {
+        transform: scale(2);
+    }
+}
+
+.glow {
+    animation: grow 2s linear reverse infinite;
+}

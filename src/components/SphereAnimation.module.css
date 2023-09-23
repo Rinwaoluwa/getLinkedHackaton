@@ -1,0 +1,32 @@
+
+.sphere {
+  /* border: 0rem solid var(--color-5);  */
+  width: 50%; 
+  height: 55%;  
+  
+  border-radius: 50%;
+  box-shadow: inset -1rem -1rem 5rem var(--color-5);
+  background-image: url(/image/sphere.png);
+  background-size: cover;
+  background-repeat: repeat-x;
+  
+  animation: animateEarth 15s linear infinite, scale-up linear both;
+  -webkit-animation: animateEarth 15s linear infinite;
+  
+  position: absolute;
+  top: 30%;
+  left: 6rem;
+
+}
+
+
+
+@keyframes animateEarth{
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -641px 0;
+  }
+}

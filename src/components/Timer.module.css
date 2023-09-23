@@ -1,0 +1,12 @@
+.timerStyle {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-family: "Unica One";
+    font-weight: 500;
+
+}
+
+.timerStyle h1 span {
+    font-size: var(--size-2);
+}
