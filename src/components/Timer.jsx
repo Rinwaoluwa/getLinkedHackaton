@@ -29,9 +29,9 @@ function Timer() {
     
     return (
         <div style={style} className={styles.timerStyle}>
-            <h1><span>{time.slice(0, 2)}</span>H</h1>
-            <h1><span>{time.slice(3, 5)}</span>M</h1>
-            <h1><span>{time.slice(6, 8)}</span>S</h1>
+            <h1><span>{time.slice(0, 2)}</span>:</h1>
+            <h1><span>{time.slice(3, 5)}</span>:</h1>
+            <h1><span>{time.slice(6, 8)}</span>:</h1>
         </div>
     )
 }
