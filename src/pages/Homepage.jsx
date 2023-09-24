@@ -1,6 +1,5 @@
-import Stars from "../components/Stars";
 import TitleTexts from "../components/TitleTexts";
-import Confirmation from '../components/Confirmation'
+
 
 
 // HOMEPAGE SECTION COMPONENTS
