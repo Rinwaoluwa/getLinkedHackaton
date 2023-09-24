@@ -134,6 +134,5 @@
     .timelineTracker:nth-child(4) .eventDate {
         position: absolute;
         left: 0;
-        background-color: red;
     }
 }

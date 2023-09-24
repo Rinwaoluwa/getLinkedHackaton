@@ -35,7 +35,9 @@ function Header() {
                     <li onClick={() => setSection('#timeline')}>Timeline</li>
                     <li onClick={() => setSection('#overview')}>Overview</li>
                     <li onClick={() => setSection('#faq')}>FAQs</li>
-                    <li onClick={() => setSection('#contact')}>Contact</li> {/*Section Footer is Contact*/}
+                    <Link to='/contact'>
+                        <li>Contact</li>
+                    </Link> {/*Section Footer is Contact*/}
                 </ul>
                 <Button text='Register' />
             </header>

@@ -10,9 +10,10 @@ const style = {
     color: '#fff',
 }
 
-function Button({text}) {
+function Button({text, btnClick}) {
+    // btnClick --- FUNCTION FOR ON CLICK PROP
     return (
-        <button style={style} className={`gradient ${styles.btn}`}>
+        <button style={style} className={`gradient ${styles.btn}`} onClick={btnClick}>
             {text}
         </button>
     )

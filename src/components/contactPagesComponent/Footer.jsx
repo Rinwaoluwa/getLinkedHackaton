@@ -1,39 +1,38 @@
+
 import InstagramSVG from "../InstagramSVG";
 import XIcon from "../XSVG";
 import FacebookSVG from "../FacebookSVG";
 import LinkedinSVG from "../LinkedInSVG";
 
+import styles from './ContactPage.module.css'
+
+
 function Footer() {
-    return (
-        <>
-     <footer className="footer">
-          <div style={{color:"#fffff"}}>Share on</div>
+  return (
+    <footer className={styles.footer}>
+      <div style={{color:"#fffff"}}>Share on</div>
 
-          <div className="icon_share">
+      <div className={styles['icon_share']}>
 
-          <div className="share">
-             <InstagramSVG height="30" />
-           </div>
-            <div className="share">
-             <XIcon/>
-           </div>
-           <div className="share">
-             <FacebookSVG/>
-           </div>
-           <div className="share">
-             <LinkedinSVG/>
-          </div>
+        <div className={styles.share}>
+          <InstagramSVG height="30" />
+        </div>
+
+        <div className={styles.share}>
+          <XIcon/>
+        </div>
+            
+        <div className={styles.share}>
+          <FacebookSVG/>
+        </div>
+
+        <div className={styles.share}>
+          <LinkedinSVG/>
+        </div>
        
-          </div>
-      </footer> 
-
-
-     
-        
-        
-        
-        </>
-    )
+      </div>
+    </footer>       
+  )
 }
 
 export default Footer;
