@@ -53,7 +53,7 @@ function SectionCriteria({children}) {
                 <img src={img} alt="people" className={styles.img}/>
             </figure>
 
-            <div>
+            <div className={styles.criteriaText}>
                 {children}
                 {criteria.map((text, index) => <Criteria title={text.title} subTitle={text.subTitle} key={index} />)}
                 <Button text='Read More' />

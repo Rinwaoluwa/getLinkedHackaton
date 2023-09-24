@@ -53,5 +53,18 @@
 
     .containerDesktop {
         display: flex;
+        padding: 2rem;
+    }
+
+    .containerDesktop a {
+        font-size: var(--size-2);
+    }
+
+    .containerDesktop ul li{
+        font-size: var(--size-1);
+    }
+
+    .containerDesktop button {
+        font-size: var(--size-1);
     }
 }

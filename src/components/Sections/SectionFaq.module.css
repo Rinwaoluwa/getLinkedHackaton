@@ -73,7 +73,7 @@
 
 
 /* MEDIA QUERY */
-    @media (min-width: 48rem) {
+    @media (min-width: 48rem) { 
 
         .faq {
             flex-direction: row;
@@ -97,6 +97,10 @@
 
     .imgCaption {
         left: 6rem;
+    }
+
+    .faq div p {
+        font-size: var(--size-1);
     }
 }
 

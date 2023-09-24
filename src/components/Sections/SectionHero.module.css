@@ -77,97 +77,46 @@
     border-bottom: .1rem solid #333;
 }
 
-/* ANIMATION */
-/*  image 1*/
-
-.chopsticks {
-	position: absolute;
-	right: 0;
-	top: 10%;
-}
-
-/*  image 2 */
-
-.veribear {
-	width: 10vmin;
-	position: absolute;
-	bottom: 5%;
-	right: 5%;
-	rotate: -20deg;
-}
-
-/* image 3 */
-.bento {
-	position: absolute;
-	bottom: 0%;
-	left: 10%;
-	rotate: 90deg;
-	height: 40vmin;
-}
-
-@supports (animation-timeline: scroll()) {
-    .mainCta {
-        animation: scale-up linear both;
-        animation-timeline: view(block);
-        animation-range: entry 0 exit 100;
-    }
-}
-
-/* @supports (animation-timeline: scroll()) {
-	section {
-		view-timeline-name: --section;
-	}
-	:is(.chopsticks, .bento) {
-		-webkit-animation: slide both linear;
-		animation: slide both linear;
-		animation-timeline: --section;
-		animation-range: exit 0 exit 25%;
-	}
-	.chopsticks {
-		--x: 50%;
-		--y: 100%;
-		--opacity: 0;
-	}
-	.bento {
-		--x: -100%;
-		--y: 100%;
-		--opacity: 0;
-	}
-	@-webkit-keyframes slide {
-		to {
-			translate: var(--x, 0) var(--y, 0);
-			opacity: var(--opacity, 1);
-			scale: var(--scale, 1);
-		}
-	}
-	@keyframes slide {
-		to {
-			translate: var(--x, 0) var(--y, 0);
-			opacity: var(--opacity, 1);
-			scale: var(--scale, 1);
-		}
-	}
-
-} */
 
 /* MEDIA QUERY */
+/* min-width: 56.25rem 900px */
 @media (min-width: 56.25rem) { /* 900px */
     .mainText {
         position: relative;
         top: 1rem;
         right: -20%;
+
+        font-size: var(--size-1);
     }
 
     .mainCta {
         align-self: center;
+        width: 50%;
     }
 
     .bulb {
-        top: -1rem;
+        top: -2rem;
+        right: 35%;
     }
 
     .content {
         display: flex;
         padding: 0 4rem 0 4rem;
+    }
+}
+
+@media (min-width: 67.13rem) {  /*1074px*/
+    .text--1 {
+        font-size: var(--size-2);
+        width: 100%;
+    }
+
+    .text--2 {
+        font-size: var(--size-2);
+        width: 100%;
+    }
+
+    .mainCta p {
+        font-size: var(--size-2);
     }
 }

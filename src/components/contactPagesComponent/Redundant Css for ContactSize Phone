@@ -122,6 +122,7 @@
     border-radius: 4px;
     
    }
+   
    .textarea{
     height: 8rem;
     background-color: #FFFFFF08;
