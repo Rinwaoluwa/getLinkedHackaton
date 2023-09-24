@@ -40,6 +40,12 @@
     font-family: var(--font-2);
 }
 
+.containerDesktop ul li {
+    position: relative;
+    z-index: 999;
+    cursor: pointer;
+} 
+
 /* MEDIA QUERY */
 
 @media (min-width: 56.25rem) { /* 900px */

@@ -9,7 +9,7 @@ import LinkedInSVG from '../LinkedInSVG';
 
 function SectionFooter() {
     return (
-        <footer className={styles.footer}>
+        <footer className={styles.footer} id='contact'>
            <main className={styles.footerNavigations}>
             <div className={styles.info}>
                     <h3 className={styles.logo}>get<span className='color-purple'>linked</span></h3>

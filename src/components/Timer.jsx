@@ -31,7 +31,7 @@ function Timer() {
         <div style={style} className={styles.timerStyle}>
             <h1><span>{time.slice(0, 2)}</span>:</h1>
             <h1><span>{time.slice(3, 5)}</span>:</h1>
-            <h1><span>{time.slice(6, 8)}</span>:</h1>
+            <h1><span>{time.slice(6, 8)}</span>{time.slice(9, 11)}</h1>
         </div>
     )
 }
