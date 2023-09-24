@@ -5,6 +5,7 @@ import HamBurgerIcon from "../HamBurgerIcon"
 import styles from './SectionHeader.module.css'
 
 function Header() {
+    
     return (
         <>
                 {/* MOBILE NAV */}

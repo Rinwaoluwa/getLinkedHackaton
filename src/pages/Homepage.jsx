@@ -1,7 +1,4 @@
-import Stars from "../components/Stars";
 import TitleTexts from "../components/TitleTexts";
-import Confirmation from '../components/Confirmation'
-
 
 // HOMEPAGE SECTION COMPONENTS
 import Header from "../components/Sections/SectionHeader";
@@ -16,14 +13,13 @@ import PrivacyPolicy from '../components/Sections/SectionPrivacyPolicy';
 import Footer from '../components/Sections/SectionFooter';
 
 
-import { SectionProvider } from "../context/ScrollAnimationContext";
 // ---- HOMEPAGE STYLING -----
 import styles from './Homepage.module.css'
 
 function Homepage() {
 
     return (
-        <SectionProvider>
+       
           <main className={styles.main}>
                 <Header />
 
@@ -65,8 +61,7 @@ function Homepage() {
                 <Footer />
 
                 {/* <Confirmation /> */}
-                </main>`
-        </SectionProvider>
+                </main>
     )
 }
 

@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './SectionFaq.module.css'
-import { useSection } from '../../context/ScrollAnimationContext';
+
 const questions = [
     {id: 203, question: 'Can I work on the project I started before the Hackaton ?'},
     {id: 407, question: 'What happens if I need help during the hackaton ?'}, 
