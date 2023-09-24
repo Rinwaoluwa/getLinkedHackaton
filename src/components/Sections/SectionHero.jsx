@@ -13,7 +13,6 @@ function Hero() {
     return (   
         <section className={`${styles.cta} border-bottom`} id='overview'>
             
-            <Stars />
             <div className={styles.mainText}>
                 <h3>Igniting a Revolution in HR Innovation</h3>
                 <BentStrokeSVG />

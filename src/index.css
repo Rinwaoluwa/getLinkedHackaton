@@ -141,6 +141,10 @@ html {
   border-bottom:.1rem solid #333;
 }
 
+.border-bottom--1 {
+  border-bottom: .1rem solid var(--color-3);
+}
+
 /* MEDIA QUERY */
 @media (min-width: 48rem) {
   html {

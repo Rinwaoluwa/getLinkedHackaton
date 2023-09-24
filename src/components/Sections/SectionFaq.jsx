@@ -53,10 +53,19 @@ function SectionFaq({children}) {
 }
 
 function Question({question}) {
+    const [isOpen, setIsOpen] = useState(false)
     return (
-        <div className={styles.question}>
-            <p>{question}</p><span className='color-purple'>+</span>
-        </div>
+        <>
+            <div className={`${styles.question} ${!isOpen && 'border-bottom--1'}`} onClick={() => setIsOpen(e => !e)}>
+                <p>{question}</p><span className='color-purple'>{isOpen ? '-' : '+'}</span>
+            </div>
+            {isOpen ?   
+                <div className={`${styles.answer} ${isOpen && 'border-bottom--1'}`}>Lorem ipsum dolor sit amet consectetur, 
+                    adipisicing elit Perspiciatis dolore voluptas dolores illum consectetur <br /> esse unde fugiat 
+                    quas aut recusandae, beatae adipisci cum delectus saepe accusantium dicta aperiam iste voluptate
+                </div> : ''
+            }
+        </>
     )
 }
 
