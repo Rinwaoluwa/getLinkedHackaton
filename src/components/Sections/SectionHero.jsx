@@ -11,7 +11,7 @@ import styles from './SectionHero.module.css'
 
 function Hero() {
     return (   
-        <section className={`${styles.cta} border-bottom`}>
+        <section className={`${styles.cta} border-bottom`} id='overview'>
             
             <Stars />
             <div className={styles.mainText}>
