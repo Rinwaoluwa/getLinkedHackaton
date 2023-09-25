@@ -1,0 +1,39 @@
+.error{
+    animation: pop 0.3s linear 1;
+    background-color: #f5f5f5;
+    padding: 4rem;
+
+    position: absolute;
+    top: 0;
+    /* left: 60%; */
+    right: 15%;
+    z-index: 99;
+
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error > * {
+    fill: goldenrod;
+}
+
+.error svg {
+    height: 4rem;
+    width: 4rem;
+}
+
+.errorMessage {
+    font-family: var(--font-1);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+  
+@keyframes pop{
+    50%  {transform: scale(1.2);}
+}
+
+
+  
+  

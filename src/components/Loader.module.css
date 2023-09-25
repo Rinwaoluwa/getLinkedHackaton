@@ -1,0 +1,75 @@
+.container {
+    position: absolute;
+    left: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+ }
+ 
+ .container h2 {
+    position: absolute;
+    color: #ffffff;
+    font-weight: 500;
+
+    font-family: var(--font-2);
+    font-size: 1.5rem;
+    font-weight: 500;
+ }
+ 
+ .loader {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0);
+    filter: url(#Gooey);
+ }
+ 
+ .loader span {
+    position: absolute;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    transform-origin: 150px;
+    /* background: #ffffff; */
+    background-image: linear-gradient(to right, var(--color-3), var(--color-2));
+    border-radius: 50%;
+    animation: animate 5s ease-in-out infinite;
+    animation-delay: calc(.20s * var(--i));
+ }
+ 
+ @keyframes animate {
+ 
+    0%,
+    10% {
+       width: 100px;
+       height: 100px;
+       transform: rotate(0deg) translateX(120px);
+    }
+ 
+    40%,
+    70% {
+       width: 40px;
+       height: 40px;
+       transform: rotate(calc(360deg / 8 * var(--i)));
+       box-shadow: 0 0 0 10px #ffffff5d;
+    }
+ 
+    90%,
+    100% {
+       width: 100px;
+       height: 100px;
+       transform: rotate(0deg) translateX(120px);
+    }
+ }
+ 
+ svg {
+    width: 0;
+    height: 0;
+ }
+ 

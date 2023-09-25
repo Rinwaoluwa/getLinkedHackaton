@@ -5,66 +5,85 @@ import { Link } from 'react-router-dom';
 import Button from "../Button";
 import Footer from "./Footer";
 import GlowEffect from "../GlowEffect";
+import Loader from '../Loader';
+import Error from '../Error';
+import ParticleContainer from '../ParticleContainer';
 
 import styles from './ContactPage.module.css'
-import Stars from '../Stars';
-import ParticleContainer from '../ParticleContainer';
 
 
 function ContactTabSize() {
 
     // USER INPUTS --
-    const [team,setTeam] = useState('');
-    const [topic,setTopic] = useState('');
+    const [firstName,setFirstName] = useState('');
+    const [phoneNumber,setPhoneNumber] = useState('');
     const [email,setEmail] = useState('');
     const [message,setMessage] = useState('');
 
+    const [isLoading, setIsLoading] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
     // PASSING DATA TO BACKEND
-    const [isLoading, setIsLoading] = useState(false)
 
     const BASE_URL = 'https://backend.getlinked.ai';
 
-    const body = {
-        email: 'sample@eexample.com',
-        phone_number: '0903322445533',
-        team_name: 'Space Explore',
-        group_size: 10,
-        project_topic: 'Web server propagation',
-        category: 1,
-        privacy_poclicy_accepted: true,
+    const data = {
+        first_name: firstName,
+        phone_number: phoneNumber,
+        email: email,
+        message: message,
     };
 
     async function handleSubmit(e) {
         e.preventDefault();
 
+        if(!firstName || !email || !phoneNumber || !message) {
+            setErrorMessage('Please fill all fields');
+            console.log(errorMessage)
+            return;
+        }
+        
         try {
-            setIsLoading(true);
 
-            const resquest = await fetch(`${BASE_URL}/hackathon/categories-list`, {
+            setIsLoading(true)
+
+            const request = await fetch(`${BASE_URL}/hackathon/contact-form`, {
                 method: 'POST',
-                'Content-Type': 'application/json',
-                body: JSON.stringify(body),
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data),
             })
 
-            const data = await resquest.json();
-            if(!resquest) throw new Error();
+            // IF DATA CANNOT BE FETCHED 
+            if (!request.ok) {
+                const errorResponseData = await request.json();
+                // setErrorMessage(errorResponseData.message);
+                throw new Error(errorResponseData.message);
+            }
 
-            console.log(data)
+            const responseData = await request.json();
+
+
+            console.log(responseData)
         }catch (error) {
+            console.log(error);
             throw new Error(error.message)
         }finally {
-            setIsLoading(false)
+            setFirstName('');
+            setPhoneNumber('');
+            setEmail('');
+            setMessage('');
+            setIsLoading(e => !e);
         }
     }
-    console.log(isLoading)
 
     return (
         <div className={`${styles.contactTabSize} ${styles.body}`}>
             <GlowEffect bottom={0} right={3}/>
+            <ParticleContainer /> {/*For the floating star effect*/}
           
             <header className={styles.header}>
                 
-            <ParticleContainer /> {/*For the floating star effect*/}
                 <Link to='/'>
                     <h2 className={styles['linked']}>get<span className={styles['linked_s']}>linked</span></h2>
                 </Link>
@@ -102,13 +121,21 @@ function ContactTabSize() {
                         <h3>Let us know about it</h3>
                      </div>
                      <form className={styles['main_QandA_form']}>
-                        <input className={styles['contact_bg']} placeholder="Team's Name"/>
-                        <input className={styles['contact_bg']} placeholder="Topic"/>
-                        <input className={styles['contact_bg']} placeholder="Email"/>
-                        <textarea className={styles['textarea']} placeholder="Message"></textarea>
-                        
+                        <input className={styles['contact_bg']} placeholder="First Name" 
+                        value={firstName} onChange={(e) => setFirstName(e.target.value)} disabled={isLoading || errorMessage}/>
+
+                        <input className={styles['contact_bg']} placeholder="Phone Number" 
+                        value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} disabled={isLoading || errorMessage}/>
+
+                        <input className={styles['contact_bg']} placeholder="Email" 
+                        value={email} onChange={(e) => setEmail(e.target.value)} disabled={isLoading || errorMessage}/>
+
+                        <textarea className={styles['textarea']} placeholder="Message" 
+                        value={message} onChange={(e) => setMessage(e.target.value)} disabled={isLoading || errorMessage}></textarea>
+
                         <Button text='Submit' btnClick={handleSubmit}/>
-                       
+                        { errorMessage && <Error error={errorMessage} />}
+                        { isLoading && <Loader />}
                      </form>
                      
                  </div>      

@@ -133,6 +133,9 @@ html {
   color: var(--color-3);
 }
 
+/* #903AFF100%
+#FF26B9100% */
+
 .gradient {
   background-image: linear-gradient(to right, var(--color-3), var(--color-2));
 }

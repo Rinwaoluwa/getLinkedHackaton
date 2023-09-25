@@ -105,7 +105,7 @@
     }
 }
 
-@media (min-width: 67.13rem) {  /*1074px*/
+/* @media (min-width: 67.13rem) {  1074px
     .text--1 {
         font-size: var(--size-2);
         width: 100%;
@@ -119,4 +119,4 @@
     .mainCta p {
         font-size: var(--size-2);
     }
-}
+} */

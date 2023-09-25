@@ -1,6 +1,11 @@
 /* eslint-disable react/prop-types */
+
+
+
+
 import GlowEffect from '../GlowEffect'
 import styles from './SectionTimeline.module.css'
+// import { useRef } from "react";
 
 
 const eventDetails = [ 
@@ -30,25 +35,27 @@ const eventDetails = [
 ]
 
 function Timeline({children}) {
+    
     return (
-        <section className={styles.timeline} id='timeline'>
-            {children}
+         
+            <section className={styles.timeline} id='timeline'>
+                {children}
 
-            <p>Here is the breakdown of the time we anticipate using for the upcoming event.</p>
+                <p>Here is the breakdown of the time we anticipate using for the upcoming event.</p>
 
-            <GlowEffect top={8}/>
+                <GlowEffect top={8}/>
 
-                {eventDetails.map((text, index)=> {
-                    return (
-                        <div className={styles.timelineTracker} key={index}>
-                            <TimelineIndex key={index} index={index + 1} />
-                            <EventDetails title={text.title} subTitle={text.subTitle} key={text}/>
-                        </div>
-                    )}) 
-                }
-            <GlowEffect right={0}  top={3}/>
-            <GlowEffect right={0} bottom={20}/>
-        </section>
+                    {eventDetails.map((text, index)=> {
+                        return (
+                            <div className={styles.timelineTracker} key={index}>
+                                <TimelineIndex key={index} index={index + 1} />
+                                <EventDetails title={text.title} subTitle={text.subTitle} key={text}/>
+                            </div>
+                        )}) 
+                    }
+                <GlowEffect right={0}  top={3}/>
+                <GlowEffect right={0} bottom={20}/>
+            </section>
     )
 }
 

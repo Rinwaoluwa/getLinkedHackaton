@@ -1,5 +1,10 @@
 // import { useEffect, useState } from "react"
-import { useEffect, useState } from "react";
+import { gsap } from "gsap";
+import { useEffect, useRef, useState } from "react";
+import { useIntersection } from "react-use";
+
+
+
 import Button from "../Button"
 import styles from './SectionCriteria.module.css'
 import GlowEffect from "../GlowEffect";
@@ -26,8 +31,47 @@ const criteria = [
 ]
 
 function SectionCriteria({children}) {
+
+    /////////////////////// SECTION SCROLL ANIMATION ///////////////
+    const sectionRef = useRef(null)
+    // const intsersection = useIntersection(sectionRef.current, {
+    //     root: null,
+    //     rootMargin: '0px',
+    //     threshold: 0.1,
+    // })
     
-    
+    // function fadeIn(element) {
+    //     gsap.timeline().fromTo(
+    //         element,
+    //         1,
+    //         {
+    //             opacity: 1,
+    //             y: -60,
+    //             ease: 'power4.out',
+    //             stagger: {
+    //                 amount: 0.3,
+    //             }
+    //         }
+    //     )
+    // }
+
+    // function fadeOut(element) {
+    //     gsap.timeline().fromTo(
+    //         element,
+    //         1,
+    //         {
+    //             opacity: 0,
+    //             y: -20,
+    //             ease: 'power4.out',
+    //         }
+    //     )
+    // }
+    // // IF INTERSECTION IS TRUE AND THE INTERSECTION RATIO IS LESS THAN 50% OF THE VIEW PORT ADD FADE-OUT : FADE-IN
+    // intsersection && intsersection.intersectionRatio < 0.1 ? fadeOut('.fadeOut') : fadeIn('.fadeIn');
+
+    ////////////////////////////////////////
+  
+
     //  ---- SETTING IMAGE FOR MOBILE AND DESKTOP SCREEN SIZE
     const [img, setImg] = useState("/image/judges.png");
 
@@ -46,6 +90,8 @@ function SectionCriteria({children}) {
         return () => window.removeEventListener('resize', handleResize)
     }, [])
     
+    console.log(sectionRef.current)
+    
     return (
         <section className={`${styles.criteria} border-bottom`}>
             <GlowEffect top={4}/>
@@ -53,7 +99,7 @@ function SectionCriteria({children}) {
                 <img src={img} alt="people" className={styles.img}/>
             </figure>
 
-            <div className={styles.criteriaText}>
+            <div className={styles.criteriaText} ref={sectionRef}>
                 {children}
                 {criteria.map((text, index) => <Criteria title={text.title} subTitle={text.subTitle} key={index} />)}
                 <Button text='Read More' />
@@ -65,7 +111,7 @@ function SectionCriteria({children}) {
 
 function Criteria({title, subTitle}) {
     return (
-        <p>
+        <p className="fadeIn fadeOut">
             <span className="color-purple">{title} {'  '}</span>
             {subTitle}
         </p>                                

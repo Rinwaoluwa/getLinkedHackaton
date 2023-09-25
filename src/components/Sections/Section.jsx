@@ -1,12 +1,55 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useState } from 'react'
+// import { useIntersection } from 'react-use';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
+
+import { useEffect, useRef, useState } from 'react'
 import styles from './Section.module.css'
 
 
 function Section({ children, mobileImg, desktopImg }) {
-    const [img, setImg] = useState({mobileImg, desktopImg})
+    const sectionRef = useRef(null);
+
+    useEffect(function() {
+        gsap.fromTo(sectionRef.current, {
+            x: -50,
+            opacity: 0,
+          }, {
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              scrub: true,
+              start: "-100px",
+            },
+            x: 50,
+            opacity: 1,
+          });
+    }, [])
+
+      
+    //   gsap.fromTo(".text", {
+    //     y: 50,
+    //     opacity: 0,
+    //   }, {
+    //     scrollTrigger: {
+    //       trigger: ".box",
+    //       start: "top center",
+    //     },
+    //     y: 0,
+    //     opacity: 1,
+    //   });
+
+
+    
+
+      
+
+    
+
     
     //  ---- SETTING IMAGE FOR MOBILE AND DESKTOP SCREEN SIZE
+    const [img, setImg] = useState({mobileImg, desktopImg})
     const BROWSER_VIEWPORT = window.innerWidth;
     
             function handleResize() {
@@ -19,9 +62,11 @@ function Section({ children, mobileImg, desktopImg }) {
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize)
     }, [])
+
+
     
     return (
-        <section className={`${styles.section} border-bottom`}>
+        <section className={`${styles.section} border-bottom`} ref={sectionRef}>
                 <figure>
                     <SectionImage mobileImg={mobileImg} desktopImg={desktopImg} />
                 </figure>

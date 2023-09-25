@@ -1,3 +1,6 @@
 [submodule "Rinwaoluwa/getLinkedHackaton"]
     path = "Rinwaoluwa/getLinkedHackaton"
     url = "https://github.com/Rinwaoluwa/getLinkedHackaton.git"
+[submodule "getLinkedHackaton"]
+	path = getLinkedHackaton
+	url = https://github.com/Rinwaoluwa/getLinkedHackaton
