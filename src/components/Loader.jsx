@@ -18,7 +18,7 @@ function Loader() {
                 </div>
             </div>
 
-            <svg>
+            <svg className={styles.svg}>
                 <filter id={styles['#Gooey']}>
                     <feGaussianBlur in="SourceGraphic" stdDeviation="10"></feGaussianBlur>
                     <feColorMatrix values="1 0 0 0 0

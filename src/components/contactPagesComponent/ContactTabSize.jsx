@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 
 
@@ -38,7 +38,6 @@ function ContactTabSize() {
 
         if(!firstName || !email || !phoneNumber || !message) {
             setErrorMessage('Please fill all fields');
-            console.log(errorMessage)
             return;
         }
         
@@ -56,18 +55,14 @@ function ContactTabSize() {
 
             // IF DATA CANNOT BE FETCHED 
             if (!request.ok) {
+
                 const errorResponseData = await request.json();
-                // setErrorMessage(errorResponseData.message);
-                throw new Error(errorResponseData.message);
+
+                setErrorMessage(errorResponseData.message);
             }
 
-            const responseData = await request.json();
-
-
-            console.log(responseData)
         }catch (error) {
-            console.log(error);
-            throw new Error(error.message)
+            if(error) setErrorMessage(error.message);
         }finally {
             setFirstName('');
             setPhoneNumber('');
@@ -77,10 +72,19 @@ function ContactTabSize() {
         }
     }
 
+    // CLEARING ERROR MESSAGE WITH TIMER
+    useEffect(function() {
+        const id = setInterval(function() {
+            setErrorMessage('');
+        }, 3000);
+
+        return () => clearInterval(id);
+    }, []);
+
     return (
-        <div className={`${styles.contactTabSize} ${styles.body}`}>
-            <GlowEffect bottom={0} right={3}/>
-            <ParticleContainer /> {/*For the floating star effect*/}
+        <div className={`${styles.contactTabSize}`}>
+            <GlowEffect top={10} left={9}/>
+            <GlowEffect bottom={10} right={9}/>
           
             <header className={styles.header}>
                 
@@ -91,7 +95,7 @@ function ContactTabSize() {
                     <li className={styles.list}>Timeline</li>
                     <li className={styles.list}>Overview</li>
                     <li className={styles.list}>FAQs</li>
-                    <li className={styles.list}>Contact Us</li>                        
+                    <li className={`${styles.list} active`}>Contact Us</li>                        
                 </ul>
                 <Button text='Register' />
             </header>

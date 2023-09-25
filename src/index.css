@@ -148,6 +148,14 @@ html {
   border-bottom: .1rem solid var(--color-3);
 }
 
+.active {
+  background-image: linear-gradient(to right, #903AFF,#FF26B9);
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 /* MEDIA QUERY */
 @media (min-width: 48rem) {
   html {

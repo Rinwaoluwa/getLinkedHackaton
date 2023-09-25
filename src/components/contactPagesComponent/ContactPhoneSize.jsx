@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 
@@ -15,7 +15,7 @@ import styles from './ContactPage.module.css'
 import Button from "../Button";
 
 function ContactPhoneSize() {
-    // USER INPUT
+    // USER INPUTS
     const [firstName,setFirstName] = useState('');
     const [phoneNumber,setPhoneNumber] = useState('');
     const [email,setEmail] = useState('');
@@ -36,10 +36,15 @@ function ContactPhoneSize() {
     async function handleSubmit(e) {
         e.preventDefault();
 
+        if(!firstName || !email || !phoneNumber || !message) {
+            setErrorMessage('Please fill all fields');
+            console.log(errorMessage)
+            return;
+        }
+        
         try {
-            setIsLoading(true);
 
-            if(!firstName || !phoneNumber || !email ||!message) return;
+            setIsLoading(true)
 
             const request = await fetch(`${BASE_URL}/hackathon/contact-form`, {
                 method: 'POST',
@@ -51,34 +56,35 @@ function ContactPhoneSize() {
 
             // IF DATA CANNOT BE FETCHED 
             if (!request.ok) {
+
                 const errorResponseData = await request.json();
-                setErrorMessage(errorResponseData.message)
-                throw new Error(errorResponseData.message || 'Failed to submit data.');
+
+                setErrorMessage(errorResponseData.message);
             }
-
-            const responseData = await request.json();
-
-
-            console.log(responseData)
         }catch (error) {
-            console.log(error);
-            throw new Error(error.message)
+            if(error) setErrorMessage(error.message);
         }finally {
             setFirstName('');
             setPhoneNumber('');
             setEmail('');
             setMessage('');
-
-            setIsLoading(e => !e)
+            setIsLoading(e => !e);
         }
     }
 
+    // CLEARING ERROR MESSAGE WITH TIMER
+    useEffect(function() {
+        const id = setInterval(function() {
+            setErrorMessage('');
+        }, 3000);
+
+        return () => clearInterval(id);
+    }, []);
     return (
         <div className={`${styles.contactPhoneSize} ${styles.body}`}>
-            <GlowEffect bottom={0} right={3}/>
-
-
-            <ParticleContainer /> {/*For the floating star effect*/}
+            <GlowEffect top={10} left={9}/>
+            <GlowEffect bottom={0} right={20}/>
+        
             <Link to='/'>
             <div className={styles['icon_group1']}>
               <CloseModalSVG />
@@ -101,8 +107,9 @@ function ContactPhoneSize() {
                 <input type="text" className={styles['contact_sm']} placeholder="Phone Number" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}/>
                 <input type="text" className={styles['contact_sm']} placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                 <textarea className={styles['textarea']} placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
-                    { isLoading && <Loader />}
-                    {errorMessage && <Error error={errorMessage} />}
+                
+                { isLoading && <Loader />}
+                {errorMessage && <Error error={errorMessage} />}
                 
                 <div className={styles['btn_contact']}>
                     <Button text='Submit' btnClick={handleSubmit}/>
@@ -110,6 +117,7 @@ function ContactPhoneSize() {
             </form>
                 <Footer/>
                 <GlowEffect top ={3} left={0} />
+                
         </div>
     )
 }

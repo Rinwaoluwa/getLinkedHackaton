@@ -5,7 +5,7 @@
     padding: 1rem 1.5rem;
 
     
-    font-size: 2rem;
+    font-size: var(--size-1);
 
     margin-bottom: 1rem;
 }
@@ -17,6 +17,10 @@
 .container a, .containerDesktop a {
     text-decoration: none;
     color: var(--color-4);
+
+    position: relative;
+    z-index: 99;
+    cursor: pointer;
 }
 
 /* DESKTOP NAVIGATION */
@@ -24,12 +28,13 @@
     padding: 1rem;
     font-size: var(--size-1);
     color: var(--color-4);
-
+    
     display: none;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
 }
+
 
 .containerDesktop ul {
     list-style: none;
@@ -43,7 +48,19 @@
 .containerDesktop ul li {
     position: relative;
     z-index: 999;
+    transition: all .5s linear;
 }
+  
+.containerDesktop ul li:hover, .containerDesktop ul li:active{
+    background-image: linear-gradient(to right, #903AFF,#FF26B9);
+    background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+
 /* MEDIA QUERY */
 
 @media (min-width: 56.25rem) { /* 900px */
