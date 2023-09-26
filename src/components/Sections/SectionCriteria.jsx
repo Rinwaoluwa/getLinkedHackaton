@@ -1,7 +1,6 @@
 // import { useEffect, useState } from "react"
 import { gsap } from "gsap";
-import { useEffect, useRef, useState } from "react";
-import { useIntersection } from "react-use";
+import { useEffect, useState } from "react";
 
 
 
@@ -31,46 +30,26 @@ const criteria = [
 ]
 
 function SectionCriteria({children}) {
-
     /////////////////////// SECTION SCROLL ANIMATION ///////////////
-    const sectionRef = useRef(null)
-    // const intsersection = useIntersection(sectionRef.current, {
-    //     root: null,
-    //     rootMargin: '0px',
-    //     threshold: 0.1,
-    // })
-    
-    // function fadeIn(element) {
-    //     gsap.timeline().fromTo(
-    //         element,
-    //         1,
-    //         {
-    //             opacity: 1,
-    //             y: -60,
-    //             ease: 'power4.out',
-    //             stagger: {
-    //                 amount: 0.3,
-    //             }
-    //         }
-    //     )
-    // }
+    useEffect(function() {
+        gsap.fromTo('.fadeIn', {
+            y: 50,
+            opacity: 0,
+          }, {
+            scrollTrigger: {
+              trigger: '.fadeIn',
+              start: "top center",
+              scrub: true, 
+            },
+            stagger: {
+                amount: 0.3,
+            },
+            y: 0,
+            opacity: 1,
+        });
+    }, [])
 
-    // function fadeOut(element) {
-    //     gsap.timeline().fromTo(
-    //         element,
-    //         1,
-    //         {
-    //             opacity: 0,
-    //             y: -20,
-    //             ease: 'power4.out',
-    //         }
-    //     )
-    // }
-    // // IF INTERSECTION IS TRUE AND THE INTERSECTION RATIO IS LESS THAN 50% OF THE VIEW PORT ADD FADE-OUT : FADE-IN
-    // intsersection && intsersection.intersectionRatio < 0.1 ? fadeOut('.fadeOut') : fadeIn('.fadeIn');
-
-    ////////////////////////////////////////
-  
+      
 
     //  ---- SETTING IMAGE FOR MOBILE AND DESKTOP SCREEN SIZE
     const [img, setImg] = useState("/image/judges.png");
@@ -90,7 +69,6 @@ function SectionCriteria({children}) {
         return () => window.removeEventListener('resize', handleResize)
     }, [])
     
-    console.log(sectionRef.current)
     
     return (
         <section className={`${styles.criteria} border-bottom`}>
@@ -99,7 +77,7 @@ function SectionCriteria({children}) {
                 <img src={img} alt="people" className={styles.img}/>
             </figure>
 
-            <div className={styles.criteriaText} ref={sectionRef}>
+            <div className={styles.criteriaText}>
                 {children}
                 {criteria.map((text, index) => <Criteria title={text.title} subTitle={text.subTitle} key={index} />)}
                 <Button text='Read More' />
@@ -111,7 +89,7 @@ function SectionCriteria({children}) {
 
 function Criteria({title, subTitle}) {
     return (
-        <p className="fadeIn fadeOut">
+        <p className="fadeIn">
             <span className="color-purple">{title} {'  '}</span>
             {subTitle}
         </p>                                

@@ -95,7 +95,7 @@ function ContactTabSize() {
                     <li className={styles.list}>Timeline</li>
                     <li className={styles.list}>Overview</li>
                     <li className={styles.list}>FAQs</li>
-                    <li className={`${styles.list} active`}>Contact Us</li>                        
+                    <li className={`${styles.list} active`}>Contact</li>                        
                 </ul>
                 <Button text='Register' />
             </header>

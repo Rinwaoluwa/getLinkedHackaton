@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import gsap from 'gsap';
 
 import { useEffect, useState } from 'react';
 import styles from './SectionFaq.module.css'
@@ -12,6 +13,26 @@ const questions = [
 ]
 
 function SectionFaq({children}) {
+
+    useEffect(function() {
+
+        gsap.fromTo('.question', {
+            y: 50,
+            opacity: 0,
+          }, {
+            scrollTrigger: {
+              trigger: '.question',
+              start: "top center",
+              scrub: true, 
+            },
+            stagger: {
+                amount: 0.3,
+            },
+            y: 0,
+            opacity: 1,
+        })
+    }, []);
+
     //  ---- SETTING IMAGE FOR MOBILE AND DESKTOP SCREEN SIZE
     const [img, setImg] = useState("/image/think.png");
 

@@ -20,32 +20,12 @@ function Section({ children, mobileImg, desktopImg }) {
             scrollTrigger: {
               trigger: sectionRef.current,
               scrub: true,
-              start: "-100px",
+              start: "-300px",
             },
             x: 50,
             opacity: 1,
-          });
-    }, [])
-
-      
-    //   gsap.fromTo(".text", {
-    //     y: 50,
-    //     opacity: 0,
-    //   }, {
-    //     scrollTrigger: {
-    //       trigger: ".box",
-    //       start: "top center",
-    //     },
-    //     y: 0,
-    //     opacity: 1,
-    //   });
-
-
-    
-
-      
-
-    
+        })
+    });
 
     
     //  ---- SETTING IMAGE FOR MOBILE AND DESKTOP SCREEN SIZE

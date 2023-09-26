@@ -8,13 +8,6 @@ import styles from './SectionHeader.module.css'
 function Header() {
     // IMPLEMENTING SCROLL INTO VIEW
     const [section, setSection] = useState('');
-
-    // useEffect(function() {
-    //     if(!section) return;
-    //     document.querySelector(section).scrollIntoView({ behavior: "smooth" });
-    // }, [section]);
-
-
     
     return (
         <>
@@ -23,7 +16,9 @@ function Header() {
                 <Link to='/'>
                     <h3 className={styles.logo}>get<span className='color-purple'>linked</span></h3>
                 </Link>
-                <HamBurgerIcon />
+                    <HamBurgerIcon />
+                {/* <Link to=''>
+                </Link> */}
             </header>
 
                 {/* DESKTOP NAV */}

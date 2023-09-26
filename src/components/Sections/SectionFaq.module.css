@@ -16,6 +16,12 @@
     font-size: var(--size-2);
 }
 
+.faq div p {
+    font-family: var(--font-2);
+    font-weight: 500;
+}
+
+
 .question p {
     font-family: var(--font-2);
     font-size: 1.5rem;
