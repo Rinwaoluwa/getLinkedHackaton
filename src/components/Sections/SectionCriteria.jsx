@@ -38,7 +38,8 @@ function SectionCriteria({children}) {
           }, {
             scrollTrigger: {
               trigger: '.fadeIn',
-              start: "top center",
+              start: "-500px",
+              end: '400px',
               scrub: true, 
             },
             stagger: {

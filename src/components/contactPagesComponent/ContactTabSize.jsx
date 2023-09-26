@@ -7,12 +7,20 @@ import Footer from "./Footer";
 import GlowEffect from "../GlowEffect";
 import Loader from '../Loader';
 import Error from '../Error';
-import ParticleContainer from '../ParticleContainer';
 
 import styles from './ContactPage.module.css'
 
 
 function ContactTabSize() {
+
+    // HANDLE SCROLLINTOVIEW    
+    function handlescrollIntoView(section) {
+        document.querySelector(`#${section}`).scrollIntoView(
+            {
+                behavior: 'smooth',
+            }
+        )
+    }
 
     // USER INPUTS --
     const [firstName,setFirstName] = useState('');
@@ -92,9 +100,19 @@ function ContactTabSize() {
                     <h2 className={styles['linked']}>get<span className={styles['linked_s']}>linked</span></h2>
                 </Link>
                 <ul className={styles.item}>
-                    <li className={styles.list}>Timeline</li>
-                    <li className={styles.list}>Overview</li>
-                    <li className={styles.list}>FAQs</li>
+
+                    <Link to='/'>
+                        <li className={styles.list} onClick={() => handlescrollIntoView('timeline')}>Timeline</li>
+                    </Link>
+
+                    <Link to='/'>
+                        <li className={styles.list}>Overview</li>
+                    </Link>
+
+                    <Link to='/'>
+                        <li className={styles.list}>FAQs</li>
+                    </Link>
+                    
                     <li className={`${styles.list} active`}>Contact</li>                        
                 </ul>
                 <Button text='Register' />

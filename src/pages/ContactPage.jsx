@@ -1,23 +1,22 @@
 import { useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 import ContactPhoneSize from "../components/contactPagesComponent/ContactPhoneSize";
 import ContactTabSize from "../components/contactPagesComponent/ContactTabSize";
 
 
-function ContactPage() {
-  const [isMobile, setIsMobile] = useState(false)
 
-  function handleResize() {
-    if(window.innerWidth < 701) setIsMobile(true);
-    else setIsMobile(false);
-  }
+function ContactPage() {
+  const [isMobile, setIsMobile] = useState(false);
+  const windowSize = useMediaQuery({query: '(max-width: 701px)'});
 
   useEffect(function () {
 
-    window.addEventListener('resize', handleResize);
+    windowSize && setIsMobile(true);
 
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
+  }, [windowSize])
+
+  console.log(isMobile);
   return (
     <>
       {isMobile ? <ContactPhoneSize/> : <ContactTabSize/>} 

@@ -22,7 +22,7 @@ function Section({ children, mobileImg, desktopImg }) {
               scrub: true,
               start: "-300px",
             },
-            x: 50,
+            x: 30,
             opacity: 1,
         })
     });
@@ -44,7 +44,7 @@ function Section({ children, mobileImg, desktopImg }) {
     }, [])
 
 
-    
+    // console.log(overview.current)
     return (
         <section className={`${styles.section} border-bottom`} ref={sectionRef}>
                 <figure>

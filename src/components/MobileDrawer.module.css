@@ -1,10 +1,22 @@
 .container {
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+
+
     padding: 2rem;
-    height: 100vh;
+    height: 100%;
+    width: 95%;
+    background-color: var(--color-1);
+
+    display: flex;
+    justify-content: center;
+    
+    text-align: center;
 }
 
-.container div {
+.closeModal {
     height: 2rem;
     width: 2rem;
     background-image: linear-gradient(to right, var(--color-3), var(--color-2));
@@ -12,7 +24,7 @@
     padding: .5rem;
 
     position: absolute;
-    top: 2rem;
+    top: 3rem;
     right: 2rem;
     z-index: -2;
 
@@ -21,7 +33,7 @@
     align-items: center;
 }
 
-.container div span{
+.closeModal span{
     display: block;
     height: 1.85rem;
     width: 1.85rem;
@@ -31,6 +43,7 @@
     
 
     position: absolute;
+    /* top: ; */
     z-index: -1;
 }
 
@@ -46,11 +59,17 @@
     top: 8rem;
 
     font-family: var(--font-3);
-    font-weight: lighter;
-    font-size: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
     color: var(--color-4);
+
+}
+
+.container ul a:link, .container ul a:visited{
+   text-decoration: none;
+   color: var(--color-4);
 }
 
 .container ul li {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }

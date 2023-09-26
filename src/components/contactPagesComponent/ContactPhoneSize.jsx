@@ -3,16 +3,15 @@ import { Link } from "react-router-dom";
 
 
 
-import GlowEffect from "../GlowEffect";
-import Footer from "./Footer";
-import ParticleContainer from "../ParticleContainer";
+import Button from "../Button";
 import CloseModalSVG from '../CloseModalSVG';
+import GlowEffect from "../GlowEffect";
 import Loader from '../Loader';
 import Error from '../Error';
+import Footer from "./Footer";
 
 
 import styles from './ContactPage.module.css'
-import Button from "../Button";
 
 function ContactPhoneSize() {
     // USER INPUTS

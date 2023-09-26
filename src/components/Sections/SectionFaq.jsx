@@ -16,14 +16,14 @@ function SectionFaq({children}) {
 
     useEffect(function() {
 
-        gsap.fromTo('.question', {
+        gsap.fromTo('.section', {
             y: 50,
             opacity: 0,
           }, {
             scrollTrigger: {
-              trigger: '.question',
-              start: "top center",
-              scrub: true, 
+              trigger: '.fadeIn',
+              start: "-300px",
+              scrub: 2, 
             },
             stagger: {
                 amount: 0.3,
@@ -77,7 +77,7 @@ function Question({question}) {
     const [isOpen, setIsOpen] = useState(false)
     return (
         <>
-            <div className={`${styles.question} ${!isOpen && 'border-bottom--1'}`} onClick={() => setIsOpen(e => !e)}>
+            <div className={`${styles.question} ${!isOpen && 'border-bottom--1'} `} onClick={() => setIsOpen(e => !e)}>
                 <p>{question}</p><span className='color-purple'>{isOpen ? '-' : '+'}</span>
             </div>
             {isOpen ?   

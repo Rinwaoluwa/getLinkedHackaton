@@ -5,7 +5,6 @@
 
 import GlowEffect from '../GlowEffect'
 import styles from './SectionTimeline.module.css'
-// import { useRef } from "react";
 
 
 const eventDetails = [ 

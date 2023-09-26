@@ -1,38 +1,55 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import Button from "../Button"
 import HamBurgerIcon from "../HamBurgerIcon"
 import styles from './SectionHeader.module.css'
+import MobileDrawer from "../MobileDrawer";
 
 function Header() {
-    // IMPLEMENTING SCROLL INTO VIEW
-    const [section, setSection] = useState('');
-    
+    const [isChecked, setIsChecked] = useState(false);
+
+    // HANDLE SCROLLINTOVIEW    
+    function handlescrollIntoView(section) {
+        document.querySelector(`#${section}`).scrollIntoView(
+            {
+                behavior: 'smooth',
+            }
+        )
+    }
+
     return (
         <>
-                {/* MOBILE NAV */}
+            {/* MOBILE NAV */}
             <header className={`${styles.container} border-bottom`}>
                 <Link to='/'>
                     <h3 className={styles.logo}>get<span className='color-purple'>linked</span></h3>
                 </Link>
+                <nav>
+                    <input type="checkbox" name="drawer-toggle" id={styles['drawer-toggle']}
+                        // TO CHECKBOK TO DISPLAY MOBILE DRAWER 
+                        checked={isChecked}
+                        onChange={() => { setIsChecked(!isChecked) }}
+                    />
                     <HamBurgerIcon />
-                {/* <Link to=''>
-                </Link> */}
+                </nav>
             </header>
 
-                {/* DESKTOP NAV */}
+            {isChecked && <MobileDrawer setIsChecked={setIsChecked}/>}
+
+            {/* DESKTOP NAV */}
             <header className={`${styles.containerDesktop} border-bottom`}>
                 <Link to='/'>
                     <h3>get<span className='color-purple'>linked</span></h3>
                 </Link>
+
                 <ul>
-                    <li onClick={() => setSection('#timeline')}>Timeline</li>
-                    <li onClick={() => setSection('#overview')}>Overview</li>
-                    <li onClick={() => setSection('#faq')}>FAQs</li>
+                    <li onClick={() => handlescrollIntoView('timeline')}>Timeline</li>
+                    <li onClick={() => handlescrollIntoView('overview')}>Overview</li>
+                    <li onClick={() => handlescrollIntoView('faq')}>FAQs</li>
                     <Link to='/contact'>
                         <li>Contact</li>
-                    </Link> {/*Section Footer is Contact*/}
+                    </Link> 
                 </ul>
                 <Button text='Register' />
             </header>

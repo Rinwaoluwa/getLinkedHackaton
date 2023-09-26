@@ -10,6 +10,17 @@
     margin-bottom: 1rem;
 }
 
+/* INPUT TYPE CHECKBOX */
+#drawer-toggle {
+    position: relative;
+    z-index: 999;
+    top: 2rem;
+    right: -.5rem;
+
+    opacity: 0;
+}
+
+
 .container h3, .containerDesktop h3 {
     font-family: var(--font-1);
 }
@@ -22,6 +33,9 @@
     z-index: 99;
     cursor: pointer;
 }
+
+
+
 
 /* DESKTOP NAVIGATION */
 .containerDesktop {

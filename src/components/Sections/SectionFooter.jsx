@@ -37,9 +37,9 @@ function SectionFooter() {
                     <div className={styles.socials}>
                         <h3 className='color-purple'>Follow Us</h3>
                         <span><InstagramSVG /></span>
-                        <span><XIcon /></span>
+                        <span><a href="https://twitter.com/getLinkedai" target='blank'><XIcon /></a></span>
                         <span><FacebookSVG /></span>
-                        <span><LinkedInSVG /> </span>
+                        <span><a href="https://ng.linkedin.com/company/getlinked-ai"><LinkedInSVG /></a></span>
                     </div>
                 </ul>
 

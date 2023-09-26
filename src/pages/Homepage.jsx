@@ -1,5 +1,4 @@
-import { HashRouter, Route, Routes } from 'react-router-dom'
-
+import { useRef } from 'react';
 
 // HOMEPAGE SECTION COMPONENTS
 import Header from "../components/Sections/SectionHeader";
@@ -20,68 +19,57 @@ import styles from './Homepage.module.css'
 
 function Homepage() {
 
-    // DO HASH ROUTING
+    // SECTION REFRERENCES FOR IMPLEMENTING SCROLL INTO VIEW
+    // const timeline = useRef(null);
+    // const overview = useRef(null);
+    // const faq = useRef(null);
 
+     
     return (
         <main className={styles.main}>
-            {/* <HashRouter> */}
-                {/* <Routes> */}
 
-                    {/* <Route element={<Header />} /> */}
-                    <Header />
-                    {/* <Route element={<Hero />} /> */}
-                    <Hero />
+                    
+            <Header />
 
-                    {/* <Route element={
-                        <Section mobileImg = '/image/big-idea.png' desktopImg = '/image/big-idea-desktop.png'>
-                            <TitleTexts title="Introduction to getlinked" subTitle="techHackaton 1.0"  />
-                        </Section>
-                    } /> */}
-
-                    <Section mobileImg = '/image/big-idea.png' desktopImg = '/image/big-idea-desktop.png'>
-                        <TitleTexts title="Introduction to getlinked" subTitle="techHackaton 1.0"  />
-                    </Section>
-
-                    {/* <Route element={
-                        <Section mobileImg= '/image/img-1.png' desktopImg= '/image/img-1-desktop.png'>
-                            <TitleTexts title="Rules and" subTitle="Guidelines" />
-                        </Section>
-                    }/> */}
-
-                        <Section mobileImg= '/image/img-1.png' desktopImg= '/image/img-1-desktop.png'>
-                            <TitleTexts title="Rules and" subTitle="Guidelines" />
-                        </Section>
+            <Hero />
+        
+            <Section mobileImg = '/image/big-idea.png' desktopImg = '/image/big-idea-desktop.png'>
+                <TitleTexts title="Introduction to getlinked" subTitle="techHackaton 1.0"  />
+            </Section>
 
 
-                    <Criteria>
-                        <TitleTexts title='Judging Criteria' subTitle='Key attributes' />
-                    </Criteria>
-
-                    <Faq>
-                        <TitleTexts title='Frequently asked' subTitle='Questions' />
-                    </Faq>
-
-                    <Timeline>
-                        <TitleTexts title='Timeline' />
-                    </Timeline>
+            <Section mobileImg= '/image/img-1.png' desktopImg= '/image/img-1-desktop.png'>
+                <TitleTexts title="Rules and" subTitle="Guidelines" />
+            </Section>
 
 
-                    <PrizesandRewards>
-                        <TitleTexts title='Prizes and' subTitle='Rewards' />
-                    </PrizesandRewards>
+            <Criteria>
+                <TitleTexts title='Judging Criteria' subTitle='Key attributes' />
+            </Criteria>
 
-                    <PartnersandSponsors />
+            <Faq>
+                <TitleTexts title='Frequently asked' subTitle='Questions' />
+            </Faq>
 
-                    <PrivacyPolicy>
-                        <TitleTexts title='Privacy Policy and' subTitle='Terms' />
-                    </PrivacyPolicy>
+            <Timeline>
+                <TitleTexts title='Timeline' />
+            </Timeline>
 
-                    <Footer />
 
-            {/* </Routes> */}
-            {/* </HashRouter> */}
-                {/* <Confirmation /> */}
-                </main>
+            <PrizesandRewards>
+                <TitleTexts title='Prizes and' subTitle='Rewards' />
+            </PrizesandRewards>
+
+            <PartnersandSponsors />
+
+            <PrivacyPolicy>
+                <TitleTexts title='Privacy Policy and' subTitle='Terms' />
+            </PrivacyPolicy>
+
+            <Footer />
+
+        {/* <Confirmation /> */}
+    </main>
     )
 }
 

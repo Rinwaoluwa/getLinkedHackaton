@@ -46,6 +46,19 @@
     align-items: end;
 }
 
+.socials span svg{
+    height: 2rem;
+    width: 2rem;
+}
+
+.socials span {
+    transition: transform .5s linear;
+}
+
+.socials span:hover {
+    transform: translateY(-1rem) scale(1);
+}
+
 .contact > *{
     margin-bottom: 1rem;
     margin-right: .5rem;
