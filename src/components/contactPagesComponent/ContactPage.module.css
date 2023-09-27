@@ -43,6 +43,14 @@
   margin-right: .8rem;
 }
 
+.share {
+  transition: transform .5s linear;
+}
+
+.share:hover {
+  transform: translateY(-1rem) scale(1);
+}
+
 .list {
   transition: all .5s linear;
 }
@@ -215,8 +223,9 @@
     margin-bottom: 1rem;
     border-radius: 4px;
     
-   }
-   .textarea{
+  }
+
+  .textarea{
     height: 8rem;
     background-color: #FFFFFF08;
     border: .1rem solid #FFFFFF;
@@ -468,6 +477,7 @@
     background: #e7e2e209;
     border-radius: 6px;
   }
+
   .main_text{
     margin-bottom:1rem;
     color: #D434FE;
@@ -477,6 +487,7 @@
     font-weight: bold;
     font-size: 2rem;
   }
+  
   .main_QandA_form{
     display: flex;
     flex-direction: column;
@@ -504,7 +515,8 @@
     margin-bottom: 1rem;
     border-radius: 4px;
     
-   }
+  }
+
    .textarea{
     background-color: #FFFFFF08;
     border: .1rem solid #FFFFFF;
@@ -513,6 +525,14 @@
     border-radius: 4px;
 
     padding: 1rem;
+  }
+
+  .share {
+    transition: transform .5s linear;
+  }
+  
+  .share:hover {
+    transform: translateY(-1rem) scale(1);
   }
 
   /* -- SHARE ON -- TEXT  */

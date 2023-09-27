@@ -17,12 +17,10 @@ function Footer() {
         <a className={styles.share} href="">
           <InstagramSVG height="30" />
         </a>
-
        
         <a className={styles.share} href="https://twitter.com/getLinkedai" target='blank'>
           <XIcon />
         </a>
-      
   
         <a className={styles.share} href="">
           <FacebookSVG/>

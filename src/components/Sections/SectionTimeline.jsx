@@ -33,6 +33,7 @@ const eventDetails = [
     },
 ]
 
+
 function Timeline({children}) {
     
     return (

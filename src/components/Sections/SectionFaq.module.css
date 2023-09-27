@@ -84,7 +84,7 @@
 
 .question {
     margin-bottom: .9rem;
-    width: fit-content;
+    width: 85%;
 }
 
 
@@ -102,7 +102,6 @@
         .img img {
             width: 30rem;
         }
-    
     }
 
 @media (min-width: 56.25rem) { /* 900px */
