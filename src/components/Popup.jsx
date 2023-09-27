@@ -9,7 +9,6 @@ function Popup() {
     useEffect(function(){
         const id = setTimeout(function(){
             popup.current.classList.add('popup');
-            console.log('Hello')
         }, 5000);
         
         return () => clearTimeout(id);
@@ -19,8 +18,8 @@ function Popup() {
     return (
         <main className={styles.container} id='#popup' ref={popup}>
             <div onClick={() => {
-                
-            }}>
+                popup.current.classList.remove('popup');
+            }} style={{position: 'absolute', left: '2rem'}}>
                 <CloseModalSVG />
             </div>
             <h1 className={styles.mainText}>Frontend Developers</h1>
@@ -61,7 +60,11 @@ function Popup() {
                     </figcaption>
                 </figure>
             </div>
-            <Button text={'Hope to hear from you'} />
+            <div onClick={() => {
+                popup.current.classList.remove('popup')
+            }}>
+                <Button text={'Hope to hear from you'} />
+            </div>
         </main>
     )
 }

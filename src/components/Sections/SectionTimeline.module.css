@@ -102,6 +102,14 @@
      .eventDetails {
          width: 50%;
      }
+    
+     .timelineTracker:nth-child(6) .eventDetails {
+        background-color: rebeccapurple;
+        /* width: 200%; */
+        position: relative;
+        /* right: 0; */
+        /* transform: translateX(10%); */
+     }
  
      .eventDate {
          align-self: center;
@@ -131,7 +139,7 @@
      /* EVENT DETAILS for the date of event*/
  
      .timelineTracker:nth-child(6) .eventDate {
-         background-color: rebeccapurple;
+         /* background-color: rebeccapurple; */
          /* margin-right: 90%; */
      }
      

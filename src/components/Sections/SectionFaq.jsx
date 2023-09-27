@@ -14,25 +14,7 @@ const questions = [
 
 function SectionFaq({children}) {
 
-    useEffect(function() {
-
-        gsap.fromTo('.section', {
-            y: 50,
-            opacity: 0,
-          }, {
-            scrollTrigger: {
-              trigger: '.fadeIn',
-              start: "-300px",
-              scrub: 2, 
-            },
-            stagger: {
-                amount: 0.3,
-            },
-            y: 0,
-            opacity: 1,
-        })
-    }, []);
-
+    
     //  ---- SETTING IMAGE FOR MOBILE AND DESKTOP SCREEN SIZE
     const [img, setImg] = useState("/image/think.png");
 

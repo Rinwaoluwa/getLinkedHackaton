@@ -63,6 +63,7 @@
     position: relative;
     z-index: 999;
     transition: all .5s linear;
+    cursor: pointer;
 }
   
 .containerDesktop ul li:hover, .containerDesktop ul li:active{

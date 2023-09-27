@@ -18,6 +18,8 @@
     color: var(--color-4);
     text-align: center;
 
+    margin-right: 4rem;
+
     position: relative;
 }
 

@@ -13,8 +13,21 @@ function Section({ children, mobileImg, desktopImg }) {
     const sectionRef = useRef(null);
 
     useEffect(function() {
-        
-    });
+
+        gsap.fromTo(sectionRef.current, {
+            x: -50,
+            opacity: 0,
+          }, {
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "-300px",
+              scrub: 2, 
+            },
+            x: 50,
+            opacity: 1,
+        })
+    }, []);
+
 
     
     //  ---- SETTING IMAGE FOR MOBILE AND DESKTOP SCREEN SIZE
