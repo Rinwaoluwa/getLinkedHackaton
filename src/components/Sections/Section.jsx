@@ -13,18 +13,7 @@ function Section({ children, mobileImg, desktopImg }) {
     const sectionRef = useRef(null);
 
     useEffect(function() {
-        gsap.fromTo(sectionRef.current, {
-            x: -50,
-            opacity: 0,
-          }, {
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              scrub: true,
-              start: "-300px",
-            },
-            x: 30,
-            opacity: 1,
-        })
+        
     });
 
     

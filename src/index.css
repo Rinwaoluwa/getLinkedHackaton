@@ -138,6 +138,16 @@ html {
 
 .gradient {
   background-image: linear-gradient(to right, var(--color-3), var(--color-2));
+  
+}
+
+.textGradient {
+  background-image: linear-gradient(to right, #903AFF,#FF26B9);
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
 }
 
 .border-bottom {
@@ -162,3 +172,4 @@ html {
     font-size: 80%; /*8px*/
   }
 }
+

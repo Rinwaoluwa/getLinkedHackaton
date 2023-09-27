@@ -16,6 +16,7 @@ import Footer from '../components/Sections/SectionFooter';
 
 // ---- HOMEPAGE STYLING -----
 import styles from './Homepage.module.css'
+import Popup from '../components/Popup';
 
 function Homepage() {
 
@@ -32,7 +33,7 @@ function Homepage() {
             <Header />
 
             <Hero />
-        
+            
             <Section mobileImg = '/image/big-idea.png' desktopImg = '/image/big-idea-desktop.png'>
                 <TitleTexts title="Introduction to getlinked" subTitle="techHackaton 1.0"  />
             </Section>
@@ -68,8 +69,8 @@ function Homepage() {
 
             <Footer />
 
-        {/* <Confirmation /> */}
-    </main>
+            <Popup />
+        </main>
     )
 }
 
