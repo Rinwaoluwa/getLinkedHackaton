@@ -14,6 +14,8 @@ function ContactPage() {
 
     windowSize && setIsMobile(true);
 
+    !windowSize && setIsMobile(false);
+
   }, [windowSize])
 
   console.log(isMobile);

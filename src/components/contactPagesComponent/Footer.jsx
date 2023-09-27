@@ -14,21 +14,23 @@ function Footer() {
 
       <div className={styles['icon_share']}>
 
-        <div className={styles.share}>
+        <a className={styles.share} href="">
           <InstagramSVG height="30" />
-        </div>
+        </a>
 
-        <div className={styles.share}>
-          <XIcon/>
-        </div>
-            
-        <div className={styles.share}>
+       
+        <a className={styles.share} href="https://twitter.com/getLinkedai" target='blank'>
+          <XIcon />
+        </a>
+      
+  
+        <a className={styles.share} href="">
           <FacebookSVG/>
-        </div>
+        </a>
 
-        <div className={styles.share}>
+        <a className={styles.share} href="https://ng.linkedin.com/company/getlinked-ai">
           <LinkedinSVG/>
-        </div>
+        </a>
        
       </div>
     </footer>       
