@@ -82,9 +82,8 @@ function ContactTabSize() {
             // IF LOADING TAKES LONGER THEN 3MIN 
             setTimeout(function() {
                 setIsLoading(false);
-                console.log('Loading stopped')
                 setErrorMessage('Something went wrong!')
-            }, 1000 * 60 * 1);
+            }, 1000 * 60 * 5);
             
 
         }catch (error) {

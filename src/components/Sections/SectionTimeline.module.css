@@ -154,7 +154,6 @@
  
      
     .timelineTracker:nth-child(7) .eventDate {
-         /* done */ 
         position: relative;
         right: -15%;
     }
@@ -171,7 +170,7 @@
     .timelineTracker:nth-child(4) .eventDetails {
         width: 100%;
         position: relative;
-        right: -15rem;
+        right: -10rem;
     }
 
     .timelineTracker:nth-child(5) .eventDetails {

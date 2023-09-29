@@ -73,7 +73,7 @@ function ContactPhoneSize() {
             setTimeout(function() {
                 setIsLoading(false);
                 setErrorMessage('Something went wrong!')
-            }, 5000);
+            }, 1000 * 60 * 5);
 
         }catch (error) {
             if(error) setErrorMessage(error.message);
