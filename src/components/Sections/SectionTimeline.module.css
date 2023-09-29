@@ -1,89 +1,89 @@
 .timeline {
-   text-align: center;
-   margin-top: 2rem;
-   color: var(--color-4);
-   padding: 2rem 1rem;
-
-   position: relative;
-}
-
-.timeline h2 {
-    font-family: var(--font-1);
-    font-weight: bold;
-    font-size: var(--size-2);
-}
-
-.timeline p {
-    font-family: var(--font-2);
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-.timeline > * {
-    margin-bottom: 1.5rem;
-}
-
-.timelineTracker {
-   display: flex;
-   align-items: center;
-   gap: 1rem;
-
-   height: 15rem;
-}
-
-.strokeContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .3rem;
-}
-
-.stroke {
-    height: 9rem;
-    width: .4rem;
-    background-color: var(--color-3);
-
-    display: block;
-}
-
-.strokeText {
-    border-radius: 50%;
-    height: 3rem;
-    width: 3rem;
-    
-    margin-bottom: .5rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    margin-top: 2rem;
     color: var(--color-4);
-
-    font-size: var(--size-1);
-}
-
-.event {
-    font-family: var(--font-2);
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-align: left;
-}
-
-.eventDetails > *{
-    margin-bottom: 1rem;
-}
-
-
-/* MEDIA QUERY */
-@media (min-width: 56.25rem) { /* 900px */
-
+    padding: 2rem 1rem;
+ 
+    position: relative;
+ }
+ 
+ .timeline h2 {
+     font-family: var(--font-1);
+     font-weight: bold;
+     font-size: var(--size-2);
+ }
+ 
+ .timeline p {
+     font-family: var(--font-2);
+     font-weight: bold;
+     font-size: 1.5rem;
+ }
+ 
+ .timeline > * {
+     margin-bottom: 1.5rem;
+ }
+ 
+ .timelineTracker {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+ 
+    height: 15rem;
+ }
+ 
+ .strokeContainer {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: .3rem;
+ }
+ 
+ .stroke {
+     height: 9rem;
+     width: .4rem;
+     background-color: var(--color-3);
+ 
+     display: block;
+ }
+ 
+ .strokeText {
+     border-radius: 50%;
+     height: 3rem;
+     width: 3rem;
+     
+     margin-bottom: .5rem;
+ 
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: var(--color-4);
+ 
+     font-size: var(--size-1);
+ }
+ 
+ .event {
+     font-family: var(--font-2);
+     font-weight: bold;
+     font-size: 1.5rem;
+     text-align: left;
+ }
+ 
+ .eventDetails > *{
+     margin-bottom: 1rem;
+ }
+ 
+ 
+ /* MEDIA QUERY */
+ @media (min-width: 56.25rem) { /* 900px */
+ 
     .timelineTracker {
         position: relative; /* the parent container for stroke */
         margin-bottom:-1.8rem;
         margin-left: 3rem;
     }
-
-     /* USE BACKGROUND-RED TO IDENTIFY EACH NTH CHILD */
-
+ 
+    /* USE BACKGROUND-RED TO IDENTIFY EACH NTH CHILD */
+ 
     /* POSITIONING LOGIC FOR DESKTOP */
     .timelineTracker:nth-child(4) .eventDate,
     .timelineTracker:nth-child(6) .eventDate, 
@@ -91,78 +91,102 @@
         order: -1;
         width: 45%;
     }
-
+ 
     .event {
         position: absolute;
-
+ 
         display: flex;
         gap: 15rem;
-    }
-
+     }
+ 
     .eventDetails {
         width: 50%;
     }
-
+ 
     .eventDate {
         align-self: center;
     }
+ 
+ 
+     .strokeContainer {
+         gap: .5rem;
+ 
+         position: absolute;
+         bottom: 0;
+         left: 50%;
+     }
+ }
 
+        /* CONVERT TO REMS  */
+    @media (min-width: 1045px) {
+        .timelineTracker:nth-child(4) .eventDetails {
+            position: relative;
+            left: 10rem;
 
-    .strokeContainer {
-        gap: .5rem;
+        }
 
-        position: absolute;
-        bottom: 0;
-        left: 50%;
+        .timelineTracker:nth-child(6) .eventDetails {
+           position: relative;
+           left: 18rem;
+           /* background-color: rebeccapurple; */
+        }
+
+        .timelineTracker:nth-child(8) .eventDetails {
+            position: relative;
+            left: 10rem;
+            width: 50%;
+            /* background-color: rebeccapurple; */
+        }
     }
-}
+ 
+    @media (min-width: 74.57rem) { /*1193px*/
 
-
-@media (min-width: 74.57rem) { /*1193px*/
-    .timelineTracker:nth-child(4) .eventDate, 
-    .timelineTracker:nth-child(6) .eventDate, 
+    .timelineTracker:nth-child(4) .eventDate,
+    .timelineTracker:nth-child(6) .eventDate,  
     .timelineTracker:nth-child(8) .eventDate{
         width: 100%;
     }
-
+ 
+    
     /* USE BACKGROUND-RED TO IDENTIFY EACH NTH CHILD */
-    
+     
     /* EVENT DETAILS for the date of event*/
-
-    .timelineTracker:nth-child(6) .eventDate {
-        background-color: rebeccapurple;
-        /* margin-right: 90%; */
-    }
-    
+ 
+     
     .timelineTracker:nth-child(7) .eventDate {
-        /* done */ 
+         /* done */ 
         position: relative;
         right: -15%;
     }
-
-    
-
-    .timelineTracker:nth-child(9) .eventDate {
-        /* done */ 
+ 
+     
+ 
+     .timelineTracker:nth-child(9) .eventDate {
         position: relative;
         right: -8%;
-    }
-    
-
+     }
+     
+ 
     /* EVENT DETAILS for the details about the event*/
+    .timelineTracker:nth-child(4) .eventDetails {
+        width: 100%;
+        position: relative;
+        right: -15rem;
+    }
+
     .timelineTracker:nth-child(5) .eventDetails {
         margin-right: 11%; /*done*/
     }
-
+ 
     .timelineTracker:nth-child(6) .eventDetails {
-        background-color: rebeccapurple;
-        width: 200%;
-        position: relative;
-        /* right: -60%; */
-    }
-
-    .timelineTracker:nth-child(8) .eventDetails {
+        transform: translateX(23rem);
         width: 150%;
-        background-color: rebeccapurple;
+        /* background-color: rebeccapurple; */
     }
-}
+ 
+    .timelineTracker:nth-child(8) .eventDetails {
+        width: 100%;
+        transform: translateX(15rem);
+        /* background-color: rebeccapurple; */
+    }
+ }

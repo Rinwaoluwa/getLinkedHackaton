@@ -3,10 +3,10 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
+  box-sizing: border-box;
   background-color: var(--color-1);
 }
 
@@ -133,12 +133,37 @@ html {
   color: var(--color-3);
 }
 
+/* #903AFF100%
+#FF26B9100% */
+
 .gradient {
   background-image: linear-gradient(to right, var(--color-3), var(--color-2));
+  
+}
+
+.textGradient {
+  background-image: linear-gradient(to right, #903AFF,#FF26B9);
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
 }
 
 .border-bottom {
   border-bottom:.1rem solid #333;
+}
+
+.border-bottom--1 {
+  border-bottom: .1rem solid var(--color-3);
+}
+
+.active {
+  background-image: linear-gradient(to right, #903AFF,#FF26B9);
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 /* MEDIA QUERY */
@@ -147,3 +172,4 @@ html {
     font-size: 80%; /*8px*/
   }
 }
+

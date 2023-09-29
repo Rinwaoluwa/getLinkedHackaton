@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Button from '../Button'
 import GlowEffect from '../GlowEffect'
 import ParticleContainer from '../ParticleContainer'
@@ -13,7 +14,6 @@ function Hero() {
     return (   
         <section className={`${styles.cta} border-bottom`} id='overview'>
             
-            <Stars />
             <div className={styles.mainText}>
                 <h3>Igniting a Revolution in HR Innovation</h3>
                 <BentStrokeSVG />
@@ -41,7 +41,11 @@ function Hero() {
                     <p>Participate in getlinked tech Hackathon 2023 
                         stand a chance to win a Big prize
                     </p>
-                    <Button text='Register' />
+
+                    <Link to='/register'>
+                        <Button text='Register' />
+                    </Link>
+                    
                     <Timer />
                 </div>
 

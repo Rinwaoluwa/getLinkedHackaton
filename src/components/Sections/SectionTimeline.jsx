@@ -1,4 +1,8 @@
 /* eslint-disable react/prop-types */
+
+
+
+
 import GlowEffect from '../GlowEffect'
 import styles from './SectionTimeline.module.css'
 
@@ -29,8 +33,11 @@ const eventDetails = [
     },
 ]
 
+
 function Timeline({children}) {
+    
     return (
+         
         <section className={styles.timeline} id='timeline'>
             {children}
 

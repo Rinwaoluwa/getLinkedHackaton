@@ -6,6 +6,7 @@ import TitleTexts from "../components/TitleTexts";
 import Header from "../components/Sections/SectionHeader";
 import Hero from "../components/Sections/SectionHero";
 import Section from "../components/Sections/Section";
+import TitleTexts from "../components/TitleTexts";
 import Criteria from "../components/Sections/SectionCriteria";
 import Faq from "../components/Sections/SectionFaq";
 import Timeline from "../components/Sections/SectionTimeline";
@@ -15,57 +16,63 @@ import PrivacyPolicy from '../components/Sections/SectionPrivacyPolicy';
 import Footer from '../components/Sections/SectionFooter';
 
 
-import { SectionProvider } from "../context/ScrollAnimationContext";
 // ---- HOMEPAGE STYLING -----
 import styles from './Homepage.module.css'
+import Popup from '../components/Popup';
 
 function Homepage() {
 
+    // SECTION REFRERENCES FOR IMPLEMENTING SCROLL INTO VIEW
+    // const timeline = useRef(null);
+    // const overview = useRef(null);
+    // const faq = useRef(null);
+
+     
     return (
-        <SectionProvider>
-          <main className={styles.main}>
-                <Header />
+        <main className={styles.main}>
 
-                <Hero />
+                    
+            <Header />
 
-                <Section mobileImg = '/image/big-idea.png' desktopImg = '/image/big-idea-desktop.png'>
-                    <TitleTexts title="Introduction to getlinked" subTitle="techHackaton 1.0"  />
-                </Section>
-
-
-                <Section mobileImg= '/image/img-1.png' desktopImg= '/image/img-1-desktop.png'>
-                    <TitleTexts title="Rules and" subTitle="Guidelines" />
-                </Section>
+            <Hero />
+            
+            <Section mobileImg = '/image/big-idea.png' desktopImg = '/image/big-idea-desktop.png'>
+                <TitleTexts title="Introduction to getlinked" subTitle="techHackaton 1.0"  />
+            </Section>
 
 
-                <Criteria>
-                    <TitleTexts title='Judging Criteria' subTitle='Key attributes' />
-                </Criteria>
-
-                <Faq>
-                    <TitleTexts title='Frequently asked' subTitle='Questions' />
-                </Faq>
-
-                <Timeline>
-                    <TitleTexts title='Timeline' />
-                </Timeline>
+            <Section mobileImg= '/image/img-1.png' desktopImg= '/image/img-1-desktop.png'>
+                <TitleTexts title="Rules and" subTitle="Guidelines" />
+            </Section>
 
 
-                <PrizesandRewards>
-                    <TitleTexts title='Prizes and' subTitle='Rewards' />
-                </PrizesandRewards>
+            <Criteria>
+                <TitleTexts title='Judging Criteria' subTitle='Key attributes' />
+            </Criteria>
 
-                <PartnersandSponsors />
+            <Faq>
+                <TitleTexts title='Frequently asked' subTitle='Questions' />
+            </Faq>
 
-                <PrivacyPolicy>
-                    <TitleTexts title='Privacy Policy and' subTitle='Terms' />
-                </PrivacyPolicy>
+            <Timeline>
+                <TitleTexts title='Timeline' />
+            </Timeline>
 
-                <Footer />
 
-                {/* <Confirmation /> */}
-                </main>`
-        </SectionProvider>
+            <PrizesandRewards>
+                <TitleTexts title='Prizes and' subTitle='Rewards' />
+            </PrizesandRewards>
+
+            <PartnersandSponsors />
+
+            <PrivacyPolicy>
+                <TitleTexts title='Privacy Policy and' subTitle='Terms' />
+            </PrivacyPolicy>
+
+            <Footer />
+
+            <Popup />
+        </main>
     )
 }
 

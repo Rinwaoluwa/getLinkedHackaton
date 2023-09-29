@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
+import gsap from 'gsap';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './SectionFaq.module.css'
 
 const questions = [
@@ -12,6 +13,8 @@ const questions = [
 ]
 
 function SectionFaq({children}) {
+
+    
     //  ---- SETTING IMAGE FOR MOBILE AND DESKTOP SCREEN SIZE
     const [img, setImg] = useState("/image/think.png");
 
@@ -53,10 +56,19 @@ function SectionFaq({children}) {
 }
 
 function Question({question}) {
+    const [isOpen, setIsOpen] = useState(false)
     return (
-        <div className={styles.question}>
-            <p>{question}</p><span className='color-purple'>+</span>
-        </div>
+        <>
+            <div className={`${styles.question} ${!isOpen && 'border-bottom--1'} `} onClick={() => setIsOpen(e => !e)}>
+                <p>{question}</p><span className='color-purple'>{isOpen ? '-' : '+'}</span>
+            </div>
+            {isOpen ?   
+                <div className={`${styles.answer} ${isOpen && 'border-bottom--1'}`}>Lorem ipsum dolor sit amet consectetur, 
+                    adipisicing elit Perspiciatis dolore voluptas dolores illum consectetur <br /> esse unde fugiat 
+                    quas aut recusandae, beatae adipisci cum delectus saepe accusantium dicta aperiam iste voluptate
+                </div> : ''
+            }
+        </>
     )
 }
 

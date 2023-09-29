@@ -1,5 +1,3 @@
-import VerticalStroke from '../verticalStroke'
-import HorizontalStroke from '../HorizontalStroke'
 import styles from './SectionPartnersandSponsors.module.css'
 import ParticleContainer from '../ParticleContainer'
 

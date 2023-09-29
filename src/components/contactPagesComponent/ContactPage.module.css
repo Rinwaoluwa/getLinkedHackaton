@@ -1,0 +1,547 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;  
+  font-size: var(--size-1);
+
+  border-bottom:.1rem solid #333;
+  margin-bottom: 1rem;
+}
+
+.btn{
+  padding:  .5rem;
+  background-image:linear-gradient(to right,#903AFF,#D434FE,#FF26B9,#FE34B9 ) ;
+  border: none;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 1.2rem;
+  border-radius:4px;
+}
+
+.footer{
+  padding: .8rem;
+  display: flex;
+  flex-direction: column;
+  width: 23rem;
+  color: white; 
+  width: 100%;  
+}
+
+.icon_share{
+ display: flex; 
+ margin-top: 5%;
+}
+
+.share > *{
+  display: block;
+  height: 3rem;
+  width: 3rem;
+}
+
+.share:not(:last-child){
+  margin-right: .8rem;
+}
+
+.share {
+  transition: transform .5s linear;
+}
+
+.share:hover {
+  transform: translateY(-1rem) scale(1);
+}
+
+.list {
+  transition: all .5s linear;
+}
+
+.list:hover {
+  background-image: linear-gradient(to right, #903AFF,#FF26B9);
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+/* CLOSE BUTON FOR MOBILE CONTACT US SCREEN */
+
+
+
+/* FOR BUTTON ELEMENT IN FORM */
+.main_QandA_form button {
+  align-self: center;
+  margin-top: 1rem;
+}
+
+
+
+/* tab-port */
+@media only screen and (max-width:1200px){
+
+  .contactPhoneSize{
+    display: none;
+  }
+
+  .contactTabSize{
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* THE getLinked Logo in Nav bar */
+  .header a {
+    text-decoration: none;
+  }
+  /* Text inside the getLinked anchor tag */
+  .linked, .linked_s {
+    font-family: var(--font-1);
+    font-size: var(--size-2);
+  }
+
+  
+  .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 1rem 1.5rem; */
+    overflow: hidden;
+  }
+
+  /* REGISTER BUTTON IN HEADER -- i.e Nav bar */
+  .header button {
+    font-size: 1.2rem;
+  }
+
+  .item{
+    display: flex;
+    gap: 1rem;
+  }
+
+  .list{
+    list-style: none; 
+    margin-left: 1rem;
+    color: #FFFFFF;
+    
+    font-size: 1.5rem;
+    font-family: var(--font-2);
+    font-weight: lighter;
+
+    cursor: pointer;
+  }
+  
+  .main{
+    display: flex;
+    padding:0 1.2rem;
+    margin-top: 3rem;
+    position: relative;
+
+  }
+
+  .linked{
+    color: #FFFFFF;
+    margin-left: 1rem;
+  }
+  .linked_s{
+    color: #D434FE;
+  }
+
+  .main-getTouch{
+    width: 50%;
+
+    padding-top: 1rem;
+    padding-left: 2rem;
+  }
+
+  .main-getIn{
+    font-family: var(--font-1);
+    font-size: var(--size-1);
+    font-weight: bold;
+
+    margin-bottom:2rem;
+    color: #D434FE;
+  }
+  
+  .main-info,.main-address,.main-call,.main-open{
+    margin-bottom:2rem;
+    color:#FFFFFF;
+
+    font-size: 1.8rem;
+    font-family: var(--font-2);
+    font-weight: 500;
+  }
+
+  /* -- SHARE ON -- TEXT IN FOOTER */
+  .footer div {
+    font-size: var(--size-1);
+    font-family: var(--font-2);
+    font-weight: 500;
+  }
+
+
+  .main-QandA{
+
+    padding: 2rem 4rem;
+    width: 50%;
+    background: #e7e2e209;
+    border-radius: 6px;
+    margin-left: 1rem;
+  }
+  .main_text{
+    margin-bottom:1rem;
+    color: #D434FE;
+
+    
+    font-size: var(--size-1);
+    font-family: var(--font-1);
+    font-weight: bold;
+  }
+  .main_QandA_form{
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+  }
+  
+  .main_QandA_form > *{
+    font-size: var(--size-1);
+    font-family: var(--font-2);
+    font-weight: 500;
+  }
+
+  /* FOR BUTTON ELEMENT IN FORM */
+  .main_QandA_form button {
+    align-self: center;
+    margin-top: 1rem;
+    font-size: var(--size-1);
+  }
+
+
+  .contact_bg{
+    height: 3rem;
+    background-color: #FFFFFF08;
+    border: .1rem solid #FFFFFF;
+    padding: .5rem 1rem;
+    color: #f1f1f1;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    
+  }
+
+  .textarea{
+    height: 8rem;
+    background-color: #FFFFFF08;
+    border: .1rem solid #FFFFFF;
+    color: #f1f1f1;
+    border-radius: 4px;
+
+    padding: 1rem;
+  }
+
+
+.share {
+  transition: transform .5s linear;
+}
+
+.share:hover {
+  transform: translateY(-1rem) scale(1);
+}
+  
+
+} 
+
+
+
+/* for phone size */
+@media screen and (max-width:700px){ /* 700px */
+  .contactTabSize{
+    display: none;
+  }
+
+  .linked, .linked_s {
+    font-family: var(--font-1);
+  }
+
+
+   /* CLOSE BUTON FOR MOBILE CONTACT US SCREEN */
+  .icon_group1 {
+    margin-bottom: 1rem;
+  } 
+  
+  
+  .QandA{
+    font-family: var(--font-1);
+    font-size: var(--size-2);
+
+    line-height: 2rem;
+    color: #D434FE;
+
+    font-weight: bold;
+  }
+
+  .QandA > * {
+    margin-bottom: 1rem;
+  }
+
+  
+.contactPhoneSize{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 3rem;
+}
+
+  .mailUs_text{
+    font-family: var(--font-2);
+    font-size:  var(--size-1);
+    color:#FFFFFF;
+    
+    line-height: 1;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  /* contact form */
+  .contact_form{
+    display: flex;
+    flex-direction: column; 
+  }
+  .contact_sm{
+   height: 2rem;
+   background-color: #FFFFFF08;
+   border: .1rem solid #FFFFFF;
+   padding: 1rem 1.5rem;
+   color: #f1f1f1;
+   margin-bottom: 2rem;
+
+   font-family: var(--font-2);
+   font-weight: 500;
+   font-size: var(--size-1);
+  }
+
+  .textarea{
+    height: 10rem;
+    background-color: #FFFFFF08;
+    border: .1rem solid #FFFFFF;
+    color: #f1f1f1;
+
+    padding: 1rem;
+
+    font-family: var(--font-2);
+    font-weight: 500;
+    font-size: var(--size-1);
+  }
+
+  .btn_contact{
+    margin-top: 1rem;
+    align-self: center;
+
+    font-family: var(--font-2);
+    font-weight: 500;
+  }
+
+
+
+  .footer {
+    padding: .8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 23rem;
+    color: white; 
+    width: 100%;  
+  }
+
+  .share {
+    transition: transform .5s linear;
+  }
+  
+  .share:hover {
+    transform: translateY(-1rem) scale(1);
+  }
+
+  /* SHARE ON -- TEXT */
+  .footer div {
+    font-family: var(--font-2);
+    font-weight: 500;
+  }
+
+  .icon_share{
+   display: flex;
+   gap: 1rem;
+   justify-content: space-between;   
+   margin-top: 5%;
+  }
+
+  .share > *{
+    display: block;
+    height: 3rem;
+    width: 3rem;
+  }  
+
+}
+
+
+
+
+/* Desktop size */
+@media only screen and (min-width:1200px){
+  
+  .contactPhoneSize{
+    display: none;
+  }
+  
+  .contactTabSize{
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* THE getLinked Logo in Nav bar */
+  .header a {
+    text-decoration: none;
+  }
+
+  /* REGISTER BUTTON */
+  .header button {
+    font-size: 2rem;
+  }
+
+  .item{
+    display: flex;
+   
+  }
+
+  .linked, .linked_s {
+    font-family: var(--font-1);
+  }
+
+
+  .list{
+    list-style: none; 
+    margin-left: 2rem;
+    color: #FFFFFF;
+    font-size: 2rem;
+
+    font-family: var(--font-2);
+    font-weight: lighter;
+    cursor: pointer;
+  }
+  
+  .main{
+    display: flex;
+    padding:0 5rem;
+    margin-top: 6rem;
+    position: relative;
+  }
+
+  .linked{
+    color: #FFFFFF;
+    font-size: 3rem;
+    font-weight: 900;
+    margin-left: 3rem;
+  }
+  .linked_s{
+    color: #D434FE;
+    font-size: 3rem;
+  }
+
+  .main-getTouch{
+    padding-top: 2rem;
+    padding-left: 4rem;
+
+    width: 50%;
+  }
+
+  .main-getIn{
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom:2rem;
+    color: #D434FE;
+
+    font-family: var(--font-1);
+    font-weight: bold;
+  }
+  
+  .main-info,.main-address,.main-call,.main-open{
+    margin-bottom:2rem;
+    color:#FFFFFF;
+
+   
+    font-family: var(--font-2);
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+
+  .main-QandA{
+
+    padding: 3rem 4.5rem;
+    width: 50%;
+    background: #e7e2e209;
+    border-radius: 6px;
+  }
+
+  .main_text{
+    margin-bottom:1rem;
+    color: #D434FE;
+    font-size: 3454rem;
+
+    font-family: var(--font-1);
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  .main_QandA_form{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .main_QandA_form > *{
+    font-family: var(--font-2);
+    font-weight: 500;
+    font-size: 2rem;
+  }
+
+  /* FOR BUTTON ELEMENT IN FORM */
+  .main_QandA_form button {
+    align-self: center;
+    margin-top: 1rem;
+  }
+
+  .contact_bg{
+    height: 3rem;
+    background-color: #FFFFFF08;
+    border: .1rem solid #FFFFFF;
+    padding: .5rem 1rem;
+    color: #f1f1f1;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    
+  }
+
+   .textarea{
+    background-color: #FFFFFF08;
+    border: .1rem solid #FFFFFF;
+
+    color: #f1f1f1;
+    border-radius: 4px;
+
+    padding: 1rem;
+  }
+
+  .share {
+    transition: transform .5s linear;
+  }
+  
+  .share:hover {
+    transform: translateY(-1rem) scale(1);
+  }
+
+  /* -- SHARE ON -- TEXT  */
+  .footer > * {
+    font-size: 2rem;
+    font-family: var(--font-2);
+    font-weight: 500;
+  }
+
+}
+
+

@@ -5,10 +5,27 @@
     padding: 1rem 1.5rem;
 
     
-    font-size: 2rem;
+    font-size: var(--size-1);
 
     margin-bottom: 1rem;
 }
+
+.mobile_drawer_nav {
+    position: relative;
+}
+
+/* INPUT TYPE CHECKBOX */
+#drawer-toggle {
+    position: absolute;
+    z-index: 999;
+    /* top: 2.5rem; */
+    right: -.5rem;
+
+    height: 4rem;
+    width: 4rem;
+    opacity: 0;
+}
+
 
 .container h3, .containerDesktop h3 {
     font-family: var(--font-1);
@@ -17,28 +34,51 @@
 .container a, .containerDesktop a {
     text-decoration: none;
     color: var(--color-4);
+
+    position: relative;
+    z-index: 99;
+    cursor: pointer;
 }
+
 
 /* DESKTOP NAVIGATION */
 .containerDesktop {
     padding: 1rem;
     font-size: var(--size-1);
     color: var(--color-4);
-
+    
     display: none;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
 }
 
+
 .containerDesktop ul {
     list-style: none;
     display: flex;
-    gap: 4rem;
+    gap: 2rem;
 
     font-size: 1.5rem;
     font-family: var(--font-2);
 }
+
+.containerDesktop ul li {
+    position: relative;
+    z-index: 999;
+    transition: all .5s linear;
+    cursor: pointer;
+}
+  
+.containerDesktop ul li:hover, .containerDesktop ul li:active{
+    background-image: linear-gradient(to right, #903AFF,#FF26B9);
+    background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
 
 .containerDesktop ul li {
     position: relative;
@@ -55,5 +95,18 @@
 
     .containerDesktop {
         display: flex;
+        padding: 2rem;
+    }
+
+    .containerDesktop a {
+        font-size: var(--size-2);
+    }
+
+    .containerDesktop ul li{
+        font-size: var(--size-1);
+    }
+
+    .containerDesktop button {
+        font-size: var(--size-1);
     }
 }

@@ -1,0 +1,46 @@
+.error{
+    animation: pop 0.3s linear 1;
+    background-color: #f5f5f5;
+    padding: 1rem 2rem;
+
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 60%;
+    
+    z-index: 99;
+
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+
+    color: black;
+}
+
+.error svg {
+    fill: goldenrod;
+    height: 4rem;
+    width: 4rem;
+}
+
+.errorMessage {
+    font-family: var(--font-1);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+  
+@keyframes pop{
+    50%  {transform: scale(1.2);}
+}
+
+/* MEDIA QUERY */
+  
+@media(min-width: 1200px) {
+    .error {
+        top: 5%;
+        right: 0;
+        width: max-content;
+        transform: translate(0, 0);
+    }
+}

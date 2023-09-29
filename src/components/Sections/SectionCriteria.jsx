@@ -1,5 +1,9 @@
 // import { useEffect, useState } from "react"
+import { gsap } from "gsap";
 import { useEffect, useState } from "react";
+
+
+
 import Button from "../Button"
 import styles from './SectionCriteria.module.css'
 import GlowEffect from "../GlowEffect";
@@ -26,8 +30,28 @@ const criteria = [
 ]
 
 function SectionCriteria({children}) {
-    
-    
+    /////////////////////// SECTION SCROLL ANIMATION ///////////////
+    useEffect(function() {
+        gsap.fromTo('.fadeIn', {
+            y: 50,
+            opacity: 0,
+          }, {
+            scrollTrigger: {
+              trigger: '.fadeIn',
+              start: "-500px",
+              end: '400px',
+              scrub: true, 
+            },
+            stagger: {
+                amount: 0.3,
+            },
+            y: 0,
+            opacity: 1,
+        });
+    }, [])
+
+      
+
     //  ---- SETTING IMAGE FOR MOBILE AND DESKTOP SCREEN SIZE
     const [img, setImg] = useState("/image/judges.png");
 
@@ -46,6 +70,7 @@ function SectionCriteria({children}) {
         return () => window.removeEventListener('resize', handleResize)
     }, [])
     
+    
     return (
         <section className={`${styles.criteria} border-bottom`}>
             <GlowEffect top={4}/>
@@ -53,7 +78,7 @@ function SectionCriteria({children}) {
                 <img src={img} alt="people" className={styles.img}/>
             </figure>
 
-            <div>
+            <div className={styles.criteriaText}>
                 {children}
                 {criteria.map((text, index) => <Criteria title={text.title} subTitle={text.subTitle} key={index} />)}
                 <Button text='Read More' />
@@ -65,7 +90,7 @@ function SectionCriteria({children}) {
 
 function Criteria({title, subTitle}) {
     return (
-        <p>
+        <p className="fadeIn">
             <span className="color-purple">{title} {'  '}</span>
             {subTitle}
         </p>                                

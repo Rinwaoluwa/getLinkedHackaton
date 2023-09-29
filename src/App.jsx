@@ -1,15 +1,20 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import Homepage from './pages/Homepage'
+import Contactpage from './pages/contactPage'
+import Registerpage from './pages/RegisterPage'
+
 
 function App() {
 
   return (
         
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route index element={<Homepage />}/>
+        <Route path='contact' element={<Contactpage />} />
+        <Route path='register' element={<Registerpage />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter> 
   )
 }
 
