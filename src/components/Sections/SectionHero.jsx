@@ -50,7 +50,7 @@ function Hero() {
                 </div>
 
                 <figure className={styles.imgContainer}>
-                    <img src="/image/hero.png" alt="A Boy with glasses" />
+                    <img src="image/hero.png" alt="A Boy with glasses" />
                     <SphereAnimation />
                 </figure>  
            </main>

@@ -131,7 +131,7 @@ useEffect(function(){
             <div className={styles.register_main}>    
                 
                 <div className={styles.reg_img}>
-                    <img src="/image/person-sitting.png" className={styles.imag} alt="walk"></img>
+                    <img src="image/person-sitting.png" className={styles.imag} alt="walk"></img>
                 </div>
                 
                 <div className={styles.reg_container}>
