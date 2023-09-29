@@ -6,8 +6,8 @@ function SectionPrizesandRewards({children}) {
             {children}
             <p>Highlight of the prizes or rewards for winners and for participants.</p>
             <figure>
-                <img src="/image/trophy.png" alt="Trophy" />
-                <img src="/image/rewards.png" alt="Medals" />
+                <img src="image/trophy.png" alt="Trophy" />
+                <img src="image/rewards.png" alt="Medals" />
             </figure>     
         </section>
     )

@@ -13,19 +13,13 @@ import PrizesandRewards from '../components/Sections/SectionPrizesandRewards';
 import PartnersandSponsors from '../components/Sections/SectionPartnersandSponsors';
 import PrivacyPolicy from '../components/Sections/SectionPrivacyPolicy';
 import Footer from '../components/Sections/SectionFooter';
+import Popup from '../components/Popup';
 
 
 // ---- HOMEPAGE STYLING -----
 import styles from './Homepage.module.css'
-import Popup from '../components/Popup';
 
 function Homepage() {
-
-    // SECTION REFRERENCES FOR IMPLEMENTING SCROLL INTO VIEW
-    // const timeline = useRef(null);
-    // const overview = useRef(null);
-    // const faq = useRef(null);
-
      
     return (
         <main className={styles.main}>
@@ -35,12 +29,12 @@ function Homepage() {
 
             <Hero />
             
-            <Section mobileImg = '/image/big-idea.png' desktopImg = '/image/big-idea-desktop.png'>
+            <Section mobileImg = 'image/big-idea.png' desktopImg = 'image/big-idea-desktop.png'>
                 <TitleTexts title="Introduction to getlinked" subTitle="techHackaton 1.0"  />
             </Section>
 
 
-            <Section mobileImg= '/image/img-1.png' desktopImg= '/image/img-1-desktop.png'>
+            <Section mobileImg= 'image/img-1.png' desktopImg= 'image/img-1-desktop.png'>
                 <TitleTexts title="Rules and" subTitle="Guidelines" />
             </Section>
 

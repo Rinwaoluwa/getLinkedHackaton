@@ -28,14 +28,14 @@ function Hero() {
                     <Stars />
 
                     <div className={styles['text--1']}>
-                        <img src="/image/bulb.png" alt="bulb" className={styles.bulb}/>
+                        <img src="image/bulb.png" alt="bulb" className={styles.bulb}/>
                         <h1>getlinked Tech</h1>
                     </div>
 
                     <div className={styles['text--2']}>
                         <h1>Hackathon <span className='color-purple'>1.0</span></h1>
-                        <img src="/image/chain.png" alt="Chain" />
-                        <img src="/image/spark.png" alt="Spark" />
+                        <img src="image/chain.png" alt="Chain" />
+                        <img src="image/spark.png" alt="Spark" />
                     </div>   
 
                     <p>Participate in getlinked tech Hackathon 2023 

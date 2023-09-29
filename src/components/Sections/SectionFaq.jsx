@@ -15,14 +15,14 @@ function SectionFaq({children}) {
 
     
     //  ---- SETTING IMAGE FOR MOBILE AND DESKTOP SCREEN SIZE
-    const [img, setImg] = useState("/image/think.png");
+    const [img, setImg] = useState("image/think.png");
 
     useEffect(function () {
 
         function handleResize() {
-            if(window.innerWidth >= 900) setImg("/image/think-desktop.png");
+            if(window.innerWidth >= 900) setImg("image/think-desktop.png");
 
-            if(window.innerWidth < 900) setImg("/image/think.png");
+            if(window.innerWidth < 900) setImg("image/think.png");
         }
         window.addEventListener('resize', handleResize);
 

@@ -11,16 +11,16 @@ function SectionPartnersandSponsors() {
             </p>
             <figure className={styles.imgContainer}>
                 <div>
-                    <img src="/image/Liberty-company-logo-white-color.png" alt="Liberty Company Logo" />                    
-                    <img src="/image/Liberty-company-logo-white.png" alt="Liberty Pay Logo" />
-                    <img src="/image/Winwise-logo-white-color.png" alt='Winwise Logo'/>
+                    <img src="image/Liberty-company-logo-white-color.png" alt="Liberty Company Logo" />                    
+                    <img src="image/Liberty-company-logo-white.png" alt="Liberty Pay Logo" />
+                    <img src="image/Winwise-logo-white-color.png" alt='Winwise Logo'/>
                 </div>
 
                 <ParticleContainer /> {/*Floating star effect*/}
                 <div>
-                    <img src="/image/wisper-logo-white.png" alt="wisper logo" />
+                    <img src="image/wisper-logo-white.png" alt="wisper logo" />
                     <span>Pay<em>box</em></span>
-                    <img src="/image/Vizual-plus.png" alt="visual plus logo" />
+                    <img src="image/Vizual-plus.png" alt="visual plus logo" />
                 </div>
             </figure>
         </section>

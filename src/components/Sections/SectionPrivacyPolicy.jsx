@@ -50,7 +50,7 @@ function SectionPrivacyPolicy({children}) {
                 </article>
             </div>
             <figure className={styles.privacyImg}>
-                <img src="/image/lock.png" alt="" />
+                <img src="image/lock.png" alt="" />
             </figure>
         </section>
     )

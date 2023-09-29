@@ -53,14 +53,14 @@ function SectionCriteria({children}) {
       
 
     //  ---- SETTING IMAGE FOR MOBILE AND DESKTOP SCREEN SIZE
-    const [img, setImg] = useState("/image/judges.png");
+    const [img, setImg] = useState("image/judges.png");
 
     const BROWSER_VIEWPORT = window.innerWidth;
 
     function handleResize() {
-        if(BROWSER_VIEWPORT >= 900) setImg("/image/judges-desktop.png");
+        if(BROWSER_VIEWPORT >= 900) setImg("image/judges-desktop.png");
 
-        if(BROWSER_VIEWPORT < 900) setImg("/image/judges.png");
+        if(BROWSER_VIEWPORT < 900) setImg("image/judges.png");
     }
 
     useEffect(function () {
