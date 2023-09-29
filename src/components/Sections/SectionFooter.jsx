@@ -1,11 +1,13 @@
 import DialerSVG from '../DialerSVG';
-import VerticalStroke from '../verticalStroke';
+import VerticalStroke from '../VerticalStroke';
 import LocationIcon from '../LocationIcon'
-import styles from './SectionFooter.module.css';
 import InstagramSVG from '../InstagramSVG';
 import XIcon from '../XSVG';
 import FacebookSVG from '../FacebookSVG';
 import LinkedInSVG from '../LinkedInSVG';
+
+
+import styles from './SectionFooter.module.css';
 
 function SectionFooter() {
     return (
