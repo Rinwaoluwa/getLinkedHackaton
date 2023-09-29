@@ -134,7 +134,6 @@
             position: relative;
             left: 6rem;
             width: 50%;
-            /* background-color: rebeccapurple; */
         }
     }
  
@@ -166,7 +165,7 @@
  
     /* EVENT DETAILS for the details about the event*/
     .timelineTracker:nth-child(4) .eventDetails {
-        width: 100%;
+        width: 50%;
         position: relative;
         right: -15rem;
     }
