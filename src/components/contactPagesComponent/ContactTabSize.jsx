@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom';
 
 
@@ -41,13 +41,21 @@ function ContactTabSize() {
         message: message,
     };
 
+    // CLEARING ERROR MESSAGE WITH TIMER
+    if(errorMessage) {
+        setInterval(function() {
+            setErrorMessage('');
+        }, 5000)
+    }
+
     async function handleSubmit(e) {
         e.preventDefault();
 
+        // IF INPUTS ARE EMPTY CALL ERROR COMPONENT AND RETURN
         if(!firstName || !email || !phoneNumber || !message) {
             setErrorMessage('Please fill all fields');
             return;
-        }
+        }        
         
         try {
 
@@ -61,6 +69,7 @@ function ContactTabSize() {
                 body: JSON.stringify(data),
             })
 
+            console.log(await request.json())
             // IF DATA CANNOT BE FETCHED 
             if (!request.ok) {
 
@@ -69,11 +78,14 @@ function ContactTabSize() {
                 setErrorMessage(errorResponseData.message);
             }
 
+
             // IF LOADING TAKES LONGER THEN 3MIN 
             setTimeout(function() {
                 setIsLoading(false);
+                console.log('Loading stopped')
                 setErrorMessage('Something went wrong!')
-            }, 1000 * 60 * 3)
+            }, 1000 * 60 * 1);
+            
 
         }catch (error) {
             if(error) setErrorMessage(error.message);
@@ -86,14 +98,6 @@ function ContactTabSize() {
         }
     }
 
-    // CLEARING ERROR MESSAGE WITH TIMER
-    useEffect(function() {
-        const id = setInterval(function() {
-            setErrorMessage('');
-        }, 3000);
-
-        return () => clearInterval(id);
-    }, []);
 
     return (
         <div className={`${styles.contactTabSize}`}>

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
@@ -32,12 +32,20 @@ function ContactPhoneSize() {
         email: email,
         message: message,
     };
+
+    // CLEARING ERROR MESSAGE WITH TIMER
+    if(errorMessage) {
+        setInterval(function() {
+            setErrorMessage('');
+        }, 1000 * 60 * 1)
+    }
+
     async function handleSubmit(e) {
         e.preventDefault();
 
+        // IF INPUTS ARE EMPTY CALL ERROR COMPONENT AND RETURN
         if(!firstName || !email || !phoneNumber || !message) {
             setErrorMessage('Please fill all fields');
-            console.log(errorMessage)
             return;
         }
         
@@ -60,6 +68,13 @@ function ContactPhoneSize() {
 
                 setErrorMessage(errorResponseData.message);
             }
+
+            // IF LOADING TAKES LONGER THEN 3MIN 
+            setTimeout(function() {
+                setIsLoading(false);
+                setErrorMessage('Something went wrong!')
+            }, 5000);
+
         }catch (error) {
             if(error) setErrorMessage(error.message);
         }finally {
@@ -71,14 +86,7 @@ function ContactPhoneSize() {
         }
     }
 
-    // CLEARING ERROR MESSAGE WITH TIMER
-    useEffect(function() {
-        const id = setInterval(function() {
-            setErrorMessage('');
-        }, 3000);
-
-        return () => clearInterval(id);
-    }, []);
+    
     return (
         <div className={`${styles.contactPhoneSize} ${styles.body}`}>
             <GlowEffect top={10} left={9}/>

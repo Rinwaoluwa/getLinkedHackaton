@@ -166,6 +166,11 @@ html {
   color: transparent;
 }
 
+.activeBtn {
+  background-color: var(--color-1);
+  border-image: linear-gradient(to right, #903AFF,#FF26B9);
+}
+
 /* MEDIA QUERY */
 @media (min-width: 48rem) {
   html {

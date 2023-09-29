@@ -4,17 +4,7 @@
     position: relative;
 }
 
-  
 
-  .btn{
-      padding:  .5rem;
-      background-image:linear-gradient(to right,#903AFF,#D434FE,#FF26B9,#FE34B9 ) ;
-      border: none;
-      color: #FFFFFF;
-      font-weight: 400;
-      font-size: 1.2rem;
-      border-radius:4px;
-    }
   .getlinked{
     color: #FFFFFF;
     font-size: 1.9rem;
@@ -45,17 +35,18 @@
     position: relative;
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 15rem;
     margin-top: 5rem;
   }
   
   .imag{
-    min-height: 150%;
-    width: 150%;
+    height: 70rem;
+    width: 200%;
+    position: relative;
+    left: -6rem;
   }
 
   .reg_container{
-   
     padding: 0 4rem;
     margin-top: 1.3rem;
     width: 100%;
@@ -68,12 +59,14 @@
     flex-direction: column;
     gap: 2rem;
     background: #e7e2e209;
-    padding: 3rem 1.5rem;
+    padding: 3rem 8rem;
+    border-radius: 1rem;
 
     color: var(--color-4);
-    font-family: var(--font-3);
+    font-family: var(--font-2);
 
-    margin-bottom: 1rem;
+    position: relative;
+
   }
   .form{
     display: flex;
@@ -123,7 +116,6 @@
     outline: none;
     
     height: 3.5rem;
-    width: 70%;
     padding: 0 2rem;
     
     color: var(--color-4);

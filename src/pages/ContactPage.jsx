@@ -18,7 +18,6 @@ function ContactPage() {
 
   }, [windowSize])
 
-  console.log(isMobile);
   return (
     <>
       {isMobile ? <ContactPhoneSize/> : <ContactTabSize/>} 
