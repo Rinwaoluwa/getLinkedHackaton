@@ -121,7 +121,7 @@
     @media (min-width: 1045px) {
         .timelineTracker:nth-child(4) .eventDetails {
             position: relative;
-            left: 8rem;
+            left: 6rem;
 
         }
 
@@ -133,7 +133,7 @@
 
         .timelineTracker:nth-child(8) .eventDetails {
             position: relative;
-            left: 10rem;
+            left: 6rem;
             width: 50%;
             /* background-color: rebeccapurple; */
         }
