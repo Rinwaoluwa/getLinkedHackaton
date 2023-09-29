@@ -10,13 +10,19 @@
     margin-bottom: 1rem;
 }
 
+.mobile_drawer_nav {
+    position: relative;
+}
+
 /* INPUT TYPE CHECKBOX */
 #drawer-toggle {
-    position: relative;
+    position: absolute;
     z-index: 999;
-    top: 2rem;
+    /* top: 2.5rem; */
     right: -.5rem;
 
+    height: 4rem;
+    width: 4rem;
     opacity: 0;
 }
 
@@ -33,8 +39,6 @@
     z-index: 99;
     cursor: pointer;
 }
-
-
 
 
 /* DESKTOP NAVIGATION */

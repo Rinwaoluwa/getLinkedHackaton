@@ -69,6 +69,12 @@ function ContactTabSize() {
                 setErrorMessage(errorResponseData.message);
             }
 
+            // IF LOADING TAKES LONGER THEN 3MIN 
+            setTimeout(function() {
+                setIsLoading(false);
+                setErrorMessage('Something went wrong!')
+            }, 1000 * 60 * 3)
+
         }catch (error) {
             if(error) setErrorMessage(error.message);
         }finally {
@@ -115,7 +121,11 @@ function ContactTabSize() {
                     
                     <li className={`${styles.list} active`}>Contact</li>                        
                 </ul>
-                <Button text='Register' />
+                
+
+                <Link to='/register'>
+                    <Button text='Register' />  
+                </Link>
             </header>
 
             <main className={styles.main}>

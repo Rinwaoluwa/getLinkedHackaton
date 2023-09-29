@@ -85,9 +85,9 @@ function ContactPhoneSize() {
             <GlowEffect bottom={0} right={20}/>
         
             <Link to='/'>
-            <div className={styles['icon_group1']}>
-              <CloseModalSVG />
-            </div>
+                <div className={styles['icon_group1']}>
+                    <CloseModalSVG />
+                </div>
             </Link>
 
             <div className={styles['QandA']}>

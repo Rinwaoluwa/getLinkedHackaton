@@ -1,7 +1,7 @@
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import Homepage from './pages/Homepage'
-import ContactPage from './pages/contactPage'
-
+import Contactpage from './pages/contactPage'
+import Registerpage from './pages/RegisterPage'
 
 
 function App() {
@@ -11,9 +11,10 @@ function App() {
     <HashRouter>
       <Routes>
         <Route index element={<Homepage />}/>
-        <Route path='contact' element={<ContactPage />} />
+        <Route path='contact' element={<Contactpage />} />
+        <Route path='register' element={<Registerpage />} />
       </Routes>
-    </HashRouter>
+    </HashRouter> 
   )
 }
 

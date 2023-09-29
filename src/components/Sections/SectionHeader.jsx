@@ -25,7 +25,7 @@ function Header() {
                 <Link to='/'>
                     <h3 className={styles.logo}>get<span className='color-purple'>linked</span></h3>
                 </Link>
-                <nav>
+                <nav className={styles.mobile_drawer_nav}>
                     <input type="checkbox" name="drawer-toggle" id={styles['drawer-toggle']}
                         // TO CHECKBOK TO DISPLAY MOBILE DRAWER 
                         checked={isChecked}
@@ -51,7 +51,9 @@ function Header() {
                         <li>Contact</li>
                     </Link> 
                 </ul>
-                <Button text='Register' />
+                <Link to='/register'>
+                    <Button text='Register' />
+                </Link>
             </header>
         </>
     )

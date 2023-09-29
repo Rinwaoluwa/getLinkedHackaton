@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Button from '../Button'
 import GlowEffect from '../GlowEffect'
 import ParticleContainer from '../ParticleContainer'
@@ -40,7 +41,11 @@ function Hero() {
                     <p>Participate in getlinked tech Hackathon 2023 
                         stand a chance to win a Big prize
                     </p>
-                    <Button text='Register' />
+
+                    <Link to='/register'>
+                        <Button text='Register' />
+                    </Link>
+                    
                     <Timer />
                 </div>
 

@@ -29,10 +29,14 @@ function MobileDrawer({ setIsChecked }) {
                 <li onClick={() => handlescrollIntoView('timeline')}>Timeline</li>
                 <li onClick={() => handlescrollIntoView('overview')}>Overview</li>
                 <li onClick={() => handlescrollIntoView('faq')}>FAQs</li>
+                
                 <Link to='/contact'>
                         <li>Contact</li>
                 </Link>
-                <Button text='Register' />
+
+                <Link to='/register'>
+                    <Button text='Register' />
+                </Link>
             </ul>
         </main>
     )
