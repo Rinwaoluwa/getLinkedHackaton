@@ -121,7 +121,7 @@
     @media (min-width: 1045px) {
         .timelineTracker:nth-child(4) .eventDetails {
             position: relative;
-            left: 10rem;
+            left: 8rem;
 
         }
 
@@ -170,7 +170,7 @@
     .timelineTracker:nth-child(4) .eventDetails {
         width: 100%;
         position: relative;
-        right: -10rem;
+        right: -15rem;
     }
 
     .timelineTracker:nth-child(5) .eventDetails {
