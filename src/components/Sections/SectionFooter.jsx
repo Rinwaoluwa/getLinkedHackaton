@@ -41,7 +41,7 @@ function SectionFooter() {
                         <span><InstagramSVG /></span>
                         <span><a href="https://twitter.com/getLinkedai" target='blank'><XIcon /></a></span>
                         <span><FacebookSVG /></span>
-                        <span><a href="https://ng.linkedin.com/company/getlinked-ai"><LinkedInSVG /></a></span>
+                        <span><a href="https://ng.linkedin.com/company/getlinked-ai" target='blank'><LinkedInSVG /></a></span>
                     </div>
                 </ul>
 

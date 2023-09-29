@@ -121,7 +121,7 @@
     @media (min-width: 1045px) {
         .timelineTracker:nth-child(4) .eventDetails {
             position: relative;
-            width: 80%;
+            width: 70%;
             left: 4rem;
 
         }
