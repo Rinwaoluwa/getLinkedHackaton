@@ -57,18 +57,18 @@ function SectionCriteria({children}) {
 
     const BROWSER_VIEWPORT = window.innerWidth;
 
-    function handleResize() {
-        if(BROWSER_VIEWPORT >= 900) setImg("image/judges-desktop.png");
-
-        if(BROWSER_VIEWPORT < 900) setImg("image/judges.png");
-    }
-
+    
     useEffect(function () {
+        function handleResize() {
+            if(BROWSER_VIEWPORT >= 900) setImg("image/judges-desktop.png");
+    
+            if(BROWSER_VIEWPORT < 900) setImg("image/judges.png");
+        }
 
         window.addEventListener('resize', handleResize);
 
         return () => window.removeEventListener('resize', handleResize)
-    }, [])
+    }, [BROWSER_VIEWPORT])
     
     
     return (
