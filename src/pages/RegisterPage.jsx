@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 
 
-// import GlowEffect from "../components/GlowEffect";
-
-
 import Header from "../components/Sections/SectionHeader";
 import Button from "../components/Button";
 import Loader from "../components/Loader";

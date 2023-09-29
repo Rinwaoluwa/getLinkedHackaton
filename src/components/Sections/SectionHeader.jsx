@@ -6,17 +6,9 @@ import HamBurgerIcon from "../HamBurgerIcon"
 import styles from './SectionHeader.module.css'
 import MobileDrawer from "../MobileDrawer";
 
+
 function Header() {
-    // IMPLEMENTING SCROLL INTO VIEW
-    const [section, setSection] = useState('');
-
-    useEffect(function() {
-        if(!section) return;
-        document.querySelector(section).scrollIntoView({ behavior: "smooth" });
-    }, [section]);
-
-    console.log(section)
-
+  
     const [isChecked, setIsChecked] = useState(false);
 
     // HANDLE SCROLLINTOVIEW    
