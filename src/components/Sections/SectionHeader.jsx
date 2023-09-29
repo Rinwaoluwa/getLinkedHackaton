@@ -46,12 +46,22 @@ function Header() {
                 </Link>
 
                 <ul>
-                    <li onClick={() => handlescrollIntoView('timeline')}>Timeline</li>
-                    <li onClick={() => handlescrollIntoView('overview')}>Overview</li>
-                    <li onClick={() => handlescrollIntoView('faq')}>FAQs</li>
+                    <Link to={'/'}>
+                        <li onClick={() => handlescrollIntoView('timeline')}>Timeline</li>
+                    </Link>
+
+                    <Link to={'/'}>
+                        <li onClick={() => handlescrollIntoView('overview')}>Overview</li>
+                    </Link>
+
+                    <Link to={'/'}>
+                        <li onClick={() => handlescrollIntoView('faq')}>FAQs</li>
+                    </Link>
+
                     <Link to='/contact'>
                         <li>Contact</li>
                     </Link> 
+                    
                 </ul>
                 <Link to='/register'>
                     <Button text='Register' />
