@@ -1,6 +1,6 @@
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import Homepage from './pages/Homepage'
-import Contactpage from './pages/contactPage'
+import Contactpage from './pages/ContactPage'
 import Registerpage from './pages/RegisterPage'
 
 
