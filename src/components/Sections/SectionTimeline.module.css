@@ -121,7 +121,7 @@
     @media (min-width: 1045px) {
         .timelineTracker:nth-child(4) .eventDetails {
             position: relative;
-            width: 50%;
+            width: 100%;
             left: 4rem;
 
         }
@@ -141,7 +141,10 @@
  
     @media (min-width: 74.57rem) { /*1193px*/
 
-    .timelineTracker:nth-child(4) .eventDate,
+    .timelineTracker:nth-child(4) .eventDate{
+        width: 70%;
+    }
+
     .timelineTracker:nth-child(6) .eventDate,  
     .timelineTracker:nth-child(8) .eventDate{
         width: 100%;
