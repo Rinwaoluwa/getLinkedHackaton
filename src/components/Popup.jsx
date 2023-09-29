@@ -43,7 +43,7 @@ function Popup() {
             </p>
             <div className={styles.developers}>
                 <figure className={styles.developer}>
-                    <img src="image/rinwa.jpg" alt="Image of getLinked Frontend Developer" 
+                    <img src="image/rinwa.JGP" alt="Image of getLinked Frontend Developer" 
                         className={styles['developer_img']}
                     />
                     <figcaption className={styles.developerInfo}>
