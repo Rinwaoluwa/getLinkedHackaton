@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import gsap from 'gsap';
 
 import { useEffect, useState } from 'react';
 import styles from './SectionFaq.module.css'

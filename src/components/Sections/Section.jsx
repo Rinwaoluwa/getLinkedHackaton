@@ -28,25 +28,6 @@ function Section({ children, mobileImg, desktopImg }) {
         })
     }, []);
 
-
-    
-    //  ---- SETTING IMAGE FOR MOBILE AND DESKTOP SCREEN SIZE
-    const [img, setImg] = useState({mobileImg, desktopImg})
-    const BROWSER_VIEWPORT = window.innerWidth;
-    
-            function handleResize() {
-                if(BROWSER_VIEWPORT >= 900) setImg(img.desktopImg);
-    
-                if(BROWSER_VIEWPORT < 900) setImg(img.mobileImg);
-            }
-
-    useEffect(function () {
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize)
-    }, [])
-
-
-    // console.log(overview.current)
     return (
         <section className={`${styles.section} border-bottom`} ref={sectionRef}>
                 <figure>

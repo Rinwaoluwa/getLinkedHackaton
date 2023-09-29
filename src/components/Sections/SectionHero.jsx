@@ -5,7 +5,7 @@ import ParticleContainer from '../ParticleContainer'
 import SphereAnimation from '../SphereAnimation'
 import Stars from '../Stars'
 import Timer from '../Timer'
-import BentStrokeSVG from '../bentStrokeSVG'
+import BentStrokeSVG from '../BentStrokeSVG'
 
 // SYLING
 import styles from './SectionHero.module.css'
